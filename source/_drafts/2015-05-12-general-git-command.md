@@ -2,8 +2,11 @@
 layout: post
 title: "常用git指令"
 description: "General GIT command"
-category: git
-tags: [git]
+date: 2015-05-12 00:00:00 +0800
+updated: 2015-05-12 00:00:00 +0800
+category: Misc
+tags: 
+- git
 ---
 
 * 丟棄 non-commit code

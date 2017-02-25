@@ -1,9 +1,14 @@
 ---
 layout: post
 title: "Build CORD Fabric"
+date: 2015-07-28 00:00:00
+updated: 2015-07-28 00:00:00
 description: ""
-category: sdn
-tags: [sdn, cord]
+category: SDN
+tags:
+- onos
+- cord
+- sdn
 ---
 
 ## 前言
@@ -16,7 +21,7 @@ tags: [sdn, cord]
 - 這邊採用 ONOS Master Branch
 
 ### CORD-Fabric Cell file 
-{% highlight shell %}
+```bash
 cat >> ~/onos/tools/test/cells/cord-fabric << EOF
 # Cell name
 export ONOS_CELL=cord-fabric
@@ -44,28 +49,28 @@ export ONOS_WEB_PASS=rocks
 EOF
 
 cell cord-fabric
-{% endhighlight %}
+```
 * ONOS_APPS 不能開 ```proxyarp```, 因為跟 ```segmentrouting``` 會衝 XD
 
 ### CORD-Fabric Network Config
-{% highlight shell %}
+```bash
 wget https://raw.githubusercontent.com/opennetworkinglab/onos/master/tools/package/config/samples/network-cfg-fabric-2x2-min.json
 onos-netcfg $OCI network-cfg-fabric-2x2-min.json
-{% endhighlight %}
+```
 
 ## About CPqD Software Switch
 
 ### Install Mininet
-{% highlight shell %}
+```bash
 git clone http://github.com/mininet/mininet
 ./mininet/util/install.sh -n3f
-{% endhighlight %}
+```
 
 ### Fabric Python Script
-{% highlight shell %}
+```bash
 wget https://raw.githubusercontent.com/rascov/docker-fabric/master/fabric.py
 python fabric.py # Should change controller IP in Line 55 by yourself
-{% endhighlight %}
+```
 
 ## Reference
 - [Software Switch Installation Guide](https://wiki.onosproject.org/display/ONOS/Software+Switch+Installation+Guide)

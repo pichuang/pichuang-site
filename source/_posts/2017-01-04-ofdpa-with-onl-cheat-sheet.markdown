@@ -2,7 +2,12 @@
 layout: post
 title:  "OF-DPA with ONL Cheat Sheet"
 date:   2017-01-04 10:42:10 +0800
-tags: [onl, ofdpa, switch]
+updated: 2017-01-04 00:00:00 +0800
+category: sdn 
+tags:
+- cicada
+- onl
+- ofdpa
 ---
 
 ## Environment
@@ -17,14 +22,14 @@ tags: [onl, ofdpa, switch]
 
 ### Set Base configuration
 - vi /mnt/onl/data/rc.boot 
-- {% highlight shell%}
+- ```bash
 #!/bin/bash
 ip addr add 192.168.11.2/24 dev ma1
 ip route add default via 192.168.11.254
 hostname edgecore-5712
 echo "nameserver 168.95.1.1" > /etc/resolvconf/resolv.conf.d/base
 resolvconf -u
-{% endhighlight %} 
+``` 
 - chmod +x /mnt/onl/data/rc.boot
   - rc script: `/etc/boot.d/52.rc.boot`
 
@@ -49,7 +54,7 @@ resolvconf -u
 ### Port Speed
 - Change Port Speed per Port
 
-{% highlight shell %}
+```bash
 vi /etc/ofdpa/accton.conf
 ...
 # port_speed_<port>= Speed
@@ -59,9 +64,9 @@ vi /etc/ofdpa/accton.conf
 port_speed_3=1000   # front port 3
 port_speed_4=10000   # front port 4
 ...
-{% endhighlight %}
+```
 - Change Port Mode per Port
-{% highlight shell %}
+```bash
 vi /etc/ofdpa/accton.conf
 ...
 # port_mode_<port> = Speed_Type [Interface Type]
@@ -72,7 +77,7 @@ port_mode_1=1x40g
 port_mode_2=1x40g if=SR4
 port_mode_3=4x10g #Breakout cable
 ...
-{% endhighlight %}
+```
 
 ### Dump BRCM Informations
 - Dump Port Table

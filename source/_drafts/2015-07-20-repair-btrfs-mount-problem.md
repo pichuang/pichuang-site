@@ -2,8 +2,13 @@
 layout: post
 title: "Repair btrfs mount problem"
 description: ""
-category: 
-tags: []
+date: 2015-07-20 00:00:00 +0800
+updated: 2015-07-20 00:00:00 +0800
+category: Infra 
+tags:
+- infra
+- btrfs
+- linux
 ---
 
 假設有問題的硬碟為 ```/dev/sda3```

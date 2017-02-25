@@ -2,11 +2,18 @@
 layout: post
 title: "SDN Lab 7$ L2 Switching and Queue using OFDPA Switch and ovs-ofctl"
 date: 2017-01-09 11:19:45 +0800
+updated: 2017-01-09 00:00:00 +0800
 description: ""
 category: sdn
-tags: [ofdpa, ovs-ofctl, queue, openflow]
+tags:
+- sdn
+- ofdpa
+- ovs-ofctl
+- queue
+- openflow
 ---
-## Building
+
+(Working...)
 
 ## Environment
 - Switch

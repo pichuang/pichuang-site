@@ -3,7 +3,11 @@ layout: post
 title: "ONS 2016 之旅"
 description: "Open Networking Summit 大進擊"
 category: trip
-tags: [ons]
+date: 2016-04-23 00:00:00
+updated: 2016-04-23 00:00:00
+tags:
+- trip 
+- ons
 ---
 
 ### 前言

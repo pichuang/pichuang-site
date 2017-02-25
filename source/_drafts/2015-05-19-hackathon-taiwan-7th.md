@@ -2,8 +2,12 @@
 layout: post
 title: "Hackathon Taiwan 7th 網路部署紀錄"
 description: "Cable Hackathon =_="
-category: event
-tags: [hackathon]
+date: 2015-05-19 00:00:00 +0800
+updated: 2015-05-19 00:00:00 +0800
+category: Event
+tags:
+- event
+- hackathon
 ---
 
 2015/05 因為 lzy 的各種勸說的關係, 我參加了 [Hackathon Taiwan 7th](https://hackathon.tw/) 網路工作人員, 還順便推坑了[舜翔](https://www.facebook.com/keats.hu)和[少友](https://www.facebook.com/shaoyou.wu) XD, 來幫忙協助處理網路佈建的部分, 會場長得如下  

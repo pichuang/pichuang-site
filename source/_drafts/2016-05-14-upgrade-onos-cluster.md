@@ -2,8 +2,12 @@
 layout: post
 title: "Upgrade ONOS Cluster"
 description: "upgrade~"
+date: 2016-05-14 00:00:00
+updated: 2016-05-14 00:00:00
 category: sdn
-tags: [sdn, onos]
+tags:
+- sdn
+- onos
 ---
 
 ## 前言

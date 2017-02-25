@@ -2,7 +2,14 @@
 layout: post
 title:  "OpenvSwitch ovs-ofctl and OF-DPA"
 date:   2017-01-06 13:42:10 +0800
-tags: [ovs, ofdpa, switch, ovs-ofctl]
+updated: 2017-01-06 00:00:00 +0800
+category: sdn
+tags:
+- sdn
+- ovs
+- ofdpa
+- switch
+- ovs-ofctl
 ---
 
 ## Goal
@@ -27,7 +34,7 @@ Remote control and management OF-DPA via ovs-ofctl
     - In this case, we just use `ovs-ofctl`, and it's also work if you want to use dpctl which CPqD provide
 
 ### Install ofdpa-ofctl script (Optional)
-{% highlight shell %}
+```bash
 cat <<'EOF' >> /usr/bin/ofdpa-ofctl
 #!/bin/bash
 SWITCH_IP="192.168.11.2"
@@ -40,7 +47,7 @@ else
 fi
 EOF
 chmod +x /usr/local/bin/ofdpa-ofctl
-{% endhighlight %}
+```
 - Same as `ovs-ofctl`
 
 ### Usage

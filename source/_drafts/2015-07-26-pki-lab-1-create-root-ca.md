@@ -2,8 +2,11 @@
 layout: post
 title: "PKI Lab$1 Create Root CA"
 description: ""
-category: pki
+date: 2015-07-26 00:00:00 +0800
+updated: 2015-07-26 00:00:00 +0800
+category: Infra
 tags:
+- infra
 - easyrsa
 - pki
 ---

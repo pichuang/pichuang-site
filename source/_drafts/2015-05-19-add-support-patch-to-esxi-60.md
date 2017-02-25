@@ -2,8 +2,13 @@
 layout: post
 title: "Add support patch to ESXi 6.0"
 description: "patch your heart"
-category: esxi 
-tags: [esxi]
+date: 2015-05-19 00:00:00 +0800
+updated: 2015-05-19 00:00:00 +0800
+category: Infra 
+tags:
+- infra
+- vmware
+- esxi
 ---
 
 目標很簡單, 我只是想要在桌電裝一個 ESXi6.0 來玩玩, 遇到了一個硬碟找不到的問題, 幸好學弟有先寫了篇文章提醒, 這邊紀錄一下打 patch 的經過

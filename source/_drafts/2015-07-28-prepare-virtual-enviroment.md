@@ -1,9 +1,13 @@
 ---
 layout: post
-title: "prepare virtual enviroment"
+title: "Prepare Virtual Enviroment"
 description: ""
-category: 
-tags: []
+date: 2015-07-28 00:00:00
+updated: 2015-07-28 00:00:00
+category: Infra
+tags:
+- infra
+- VMWare
 ---
 
 此篇目標是要利用一些實際數值來估算虛擬環境所需實際用量, 多數虛擬環境使用效能不佳, 都是起始規劃有問題, 規劃包含 Networking, Storage, CPU, Memory 等. 若能事先透過較為精準的估算, 即可讓此狀況大幅改善.

@@ -2,8 +2,10 @@
 layout: post
 title: "ONOS on CentOS7"
 description: "Single ONOS instance"
-category: sdn
-tags: [onos]
+category: SDN
+tags:
+- sdn
+- onos
 ---
 
 這篇是紀錄建立單台 onos controller 的文章

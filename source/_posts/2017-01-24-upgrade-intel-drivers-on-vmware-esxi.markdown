@@ -2,9 +2,14 @@
 layout: post
 title: "Upgrade Intel Drivers on VMWare ESXi"
 date: 2017-01-24 21:51:47 +0800
+updated: 2017-01-24 00:00:00 +0800
 description: ""
-category: vmware
-tags: [vmware, intel, driver]
+category: Infra
+tags:
+- infra
+- vmware
+- intel
+- driver
 ---
 
 ## Objective
@@ -18,17 +23,17 @@ Upgrade Intel NIC firmware (5.02->5.05) on VMWare ESXi for make sure the DirectP
 ## Step
 
 ### Check Current Version
-{% highlight shell %}
+```bash
 [root@esxi:~] ethtool -i vmnic2
 driver: i40e
 version: 1.3.38
 firmware-version: 5.02 0x80002248 1.33.0
 bus-info: 0000:01:00.0
-{% endhighlight %}
+```
 - Please enable SSH daemon on the server
 
 ### Download NVM Update file and Upgrade NIC
-{% highlight shell %}
+```bash
 [root@esxi:~] cd /tmp
 [root@esxi:/tmp] wget http://downloadmirror.intel.com/25796/eng/XL710_NVMUpdatePackage_v5_05_ESX.tar.gz
 [root@esxi:/tmp] tar zxvf XL710_NVMUpdatePackage_v5_05_ESX.tar.gz
@@ -61,17 +66,17 @@ Reboot is required to complete the update process.
 Tool execution completed with the following status: All operations completed successfully
 
 [root@esxi:/tmp/XL710/ESXi_x64] reboot
-{% endhighlight %}
+```
 - [NVM Update Utility for Intel® Ethernet Converged Network Adapter XL710 and X710 Series](https://downloadcenter.intel.com/download/24769#help)
 
 ### Check Latest Version
-{% highlight shell %}
+```bash
 [root@esxi:~] ethtool -i vmnic2
 driver: i40e
 version: 1.3.38
 firmware-version: 5.05 0x800028ac 1.33.0
 bus-info: 0000:01:00.1
-{% endhighlight %}
+```
 
 ## Reference
 - [update intel drivers on vmware esxi](http://www.it-book.co.uk/2835/update-intel-drivers-on-vmware-esxi)
