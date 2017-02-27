@@ -2,7 +2,9 @@
 layout: post
 title: "ONOS on CentOS7"
 description: "Single ONOS instance"
-category: SDN
+date: 2015-07-27 00:00:00 +0800
+updated: 2015-07-27 00:00:00 +0800
+category: sdn
 tags:
 - sdn
 - onos
