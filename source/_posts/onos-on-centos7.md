@@ -10,54 +10,50 @@ tags:
 
 這篇是紀錄建立單台 onos controller 的文章
 
-Enviroment
-==========
+## Enviroment
+
 OS: CentOS7 x86_64  
 Network: 192.168.59.202  
 Account: root  
 
-Prepare
-=======
-```
+## Prepare
+
+```bash
 yum install -y wget net-tools
 ```
 
-Firewalld setting
-=================
+## Firewalld setting
+
 ```bash
 systemctl start firewalld
 firewall-cmd --zone=public --add-port=8181/tcp --permanent
 firewall-cmd --zone=public --add-port=6633/tcp --permanent
 ```
- * Port 8181: ONOS Web server listen port
- * Port 6633: OpenFlow control plane listen port
- * 可利用 ```firewall-cmd --zone=public --list-all``` 確認ports狀況
+* Port 8181: ONOS Web server listen port
+* Port 6633: OpenFlow control plane listen port
+* 可利用 `firewall-cmd --zone=public --list-all` 確認ports狀況
 
-Download ONOS Source 
-====================
-```
+## Download ONOS Source 
+```bash
 cd ~/
 git clone https://gerrit.onosproject.org/onos
 ```
 
-Make directory
-==============
-```
+## Make directory
+```bash
 cd ~ && mkdir Downloads Applications
 cd Downloads
 ```
 * 必要建立, 後面會用到
 
-Install JAVA 8
-==========
-```
+## Install JAVA 8
+```bash
 wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u45-b14/jdk-8u45-linux-x64.rpm"
 rpm -ivh jdk-8u45-linux-x64.rpm
 ```
 
-Download Karaf & Maven
-====================
-```
+## Download Karaf & Maven
+```bash
 wget http://archive.apache.org/dist/karaf/3.0.5/apache-karaf-3.0.5.tar.gz
 wget https://archive.apache.org/dist/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz
 tar -zxvf apache-karaf-3.0.5.tar.gz -C ../Applications/
@@ -65,9 +61,8 @@ tar -zxvf apache-maven-3.3.9-bin.tar.gz -C ../Applications/
 ```
 * 建議不要自己改版本, 因為有相依性的問題
 
-bashrc setting
-===========
-```
+## bashrc setting
+```bash
 cat >> ~/.bashrc << EOF
 export ONOS_ROOT=~/onos
 source $ONOS_ROOT/tools/dev/bash_profile
@@ -86,19 +81,17 @@ source ~/.bashrc
   * [Execution sequence for .bash_profile, .bashrc, .bash_login, .profile and .bash_logout](http://www.thegeekstuff.com/2008/10/execution-sequence-for-bash_profile-bashrc-bash_login-profile-and-bash_logout) 
 
 
-Build ONOS
-==========
+## Build ONOS
 
-* 編譯 onos
+### 編譯 onos
 
-```
+```bash
 cd ~/onos
 mvn clean install
 ```
 
-Create a cell definition
-========================
-```
+### Create a cell definition
+```bash
 cat >> ~/onos/tools/test/cells/sdnds-tw << EOF
 # ONOS from Scratch tutorial cell
 
@@ -128,22 +121,19 @@ EOF
 cell sdnds-tw
 ```
 
-Run ONOS
-========
-```
+## Run ONOS
+```bash
 onos-setup-karaf clean 192.168.59.202
 karaf clean
 ```
-  * 與 ```ok clean```一樣
+  * 與 `ok clean`一樣
 
-Open Web GUI
-============
+## Open Web GUI
 ```
 http://192.168.59.202:8181/onos/ui/index.html
 ```
 
-Reference
-=========
+## Reference
 * [ONOS from Scratch](https://wiki.onosproject.org/display/ONOS/ONOS+from+Scratch)
 * [Installing and Running ONOS](https://wiki.onosproject.org/display/ONOS/Installing+and+Running+ONOS)
 * [Getting ONOS](https://wiki.onosproject.org/display/ONOS/Getting+ONOS)
