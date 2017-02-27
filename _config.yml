@@ -71,3 +71,6 @@ deploy:
   type: git
   repo: http://github.com/pichuang/pichuang.github.io.git
   branch: master
+
+# Disqus comments
+disqus_shortname: pichuang-tw

@@ -2,8 +2,8 @@
 layout: post
 title: "Upgrade ONOS Cluster"
 description: "upgrade~"
-date: 2016-05-14 00:00:00
-updated: 2016-05-14 00:00:00
+date: 2016-05-14 00:00:00 +0800
+updated: 2016-05-14 00:00:00 +0800
 category: sdn
 tags:
 - sdn
@@ -16,7 +16,7 @@ tags:
 ## 目標
 接續上篇文章的環境，升級已經建好的 ONOS Cluster
 
-## Enviroment
+## Environment
 - Build Machine
   - MAC OSX 10.11.3
   - Java 1.8.0

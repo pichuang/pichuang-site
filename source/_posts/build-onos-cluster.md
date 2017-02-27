@@ -3,8 +3,8 @@ layout: post
 comments: true
 title: "Build ONOS Cluster"
 description: "Detail of Building ONOS Cluster"
-date: 2016-05-14 00:00:00
-updated: 2016-05-14 00:00:00
+date: 2016-05-14 00:00:00 +0800
+updated: 2017-01-09 00:00:00 +0800
 category: sdn
 tags:
 - sdn

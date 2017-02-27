@@ -35,7 +35,7 @@ Remote control and management OF-DPA via ovs-ofctl
 
 ### Install ofdpa-ofctl script (Optional)
 ```bash
-cat <<'EOF' >> /usr/bin/ofdpa-ofctl
+cat <<'EOF' >> /usr/local/bin/ofdpa-ofctl
 #!/bin/bash
 SWITCH_IP="192.168.11.2"
 OPTS="-O OpenFlow13 tcp:$SWITCH_IP:6633"

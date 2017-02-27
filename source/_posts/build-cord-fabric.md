@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "Build CORD Fabric"
-date: 2015-07-28 00:00:00
-updated: 2015-07-28 00:00:00
+date: 2015-07-28 00:00:00 +0800
+updated: 2015-07-28 00:00:00 +0800
 description: ""
-category: SDN
+category: sdn
 tags:
 - onos
 - cord

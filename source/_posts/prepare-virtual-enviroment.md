@@ -2,21 +2,22 @@
 layout: post
 title: "Prepare Virtual Enviroment"
 description: ""
-date: 2015-07-28 00:00:00
-updated: 2015-07-28 00:00:00
+date: 2015-07-28 00:00:00 +0800
+updated: 2015-07-28 00:00:00 +0800
 category: Infra
 tags:
 - infra
 - VMWare
 ---
 
+## Goal
 此篇目標是要利用一些實際數值來估算虛擬環境所需實際用量, 多數虛擬環境使用效能不佳, 都是起始規劃有問題, 規劃包含 Networking, Storage, CPU, Memory 等. 若能事先透過較為精準的估算, 即可讓此狀況大幅改善.
 
-## 估算虛擬環境用量
+### 估算虛擬環境用量
 1. 利用一些 Monitor 的專案, 抓取重要且日常皆會使用的資料, 包含 CPU, Memory, Read/Write IO
 2. 利用一般環境的資料做估算, 但此方式不是針對維運狀況做估算, 可能會有不小的標準差. 時間允許的狀況下, 建議還是採用方案一會比較適當
 
-## 估算單台 Server 上所能負載的 VM 數
+### 估算單台 Server 上所能負載的 VM 數
 依據 Server 上的 CPU/Memory 所決定, 這邊使用 ```IBM E5520 @ 2.27GHz``` 為例
 - 4 Cores
 - 不開 HT
