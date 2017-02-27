@@ -1,13 +1,17 @@
 ---
 layout: post
-title: 'OpenvSwitch Debug$  Enviroment'
-date: 2014-10-25 04:28
-comments: true
-categories: 
+title: 'OpenvSwitch Debug$ Environment'
+date: 2014-10-25 04:28:00 +0800
+updated: 2014-10-25 04:28:00 +0800
+categories: sdn
+tags:
+- sdn
+- openvswitch
+
 ---
 OpenvSwitch debug 要分三個階段看
 
-1. OpenvSwitch Enviroment
+1. OpenvSwitch Environment
 2. Trace Flow
 3. Controller App
   

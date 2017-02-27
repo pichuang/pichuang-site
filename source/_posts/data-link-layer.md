@@ -1,11 +1,13 @@
 ---
 layout: post
-title: 'Data Link Layer'
-date: 2015-01-05 10:07
-comments: true
-categories: 
-published: false
+title: "Data Link Layer"
+date: 2015-01-05 10:07:00 +0800
+updated: 2015-01-05 10:07:00 +0800
+categories: Misc
+tags:
+- misc
 ---
+
 transmission error detection
 ===
 

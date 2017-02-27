@@ -1,10 +1,11 @@
 ---
 layout: post
 title: 'OpenvSwitch Lab 7$ Setting OpenWrt'
-date: 2014-10-25 01:43
-comments: true
+date: 2014-10-25 01:43:00 +0800
+updated: 2014-10-25 01:43:00 +0800
 categories: sdn
 tags:
+- sdn
 - openvswitch
 - openwrt
 ---

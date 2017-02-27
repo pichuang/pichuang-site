@@ -4,9 +4,9 @@ title: "ONS 2016 之旅"
 description: "Open Networking Summit 大進擊"
 date: 2016-04-23 00:00:00 +0800
 updated: 2016-04-23 00:00:00 +0800
-category: trip
+category: Event
 tags:
-- trip 
+- event 
 - ons
 ---
 
