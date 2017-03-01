@@ -22,16 +22,16 @@ tags:
     - [ofdpa_3.0 EA3](https://github.com/onfsdn/atrium-docs/blob/master/16A/ONOS/builds/ofdpa_3.0.3.1%2Baccton1.4~1-1_amd64.deb)
 
 ### Set Base configuration
-- vi /mnt/onl/data/rc.boot 
-- ```bash
+1. vi /mnt/onl/data/rc.boot 
+```bash
 #!/bin/bash
 ip addr add 192.168.11.2/24 dev ma1
 ip route add default via 192.168.11.254
 hostname edgecore-5712
 echo "nameserver 168.95.1.1" > /etc/resolvconf/resolv.conf.d/base
 resolvconf -u
-``` 
-- chmod +x /mnt/onl/data/rc.boot
+```
+2. chmod +x /mnt/onl/data/rc.boot
   - rc script: `/etc/boot.d/52.rc.boot`
 
 ### Rate Limit
@@ -54,9 +54,8 @@ resolvconf -u
 
 ### Port Speed
 - Change Port Speed per Port
-
+  - vi /etc/ofdpa/accton.conf
 ```bash
-vi /etc/ofdpa/accton.conf
 ...
 # port_speed_<port>= Speed
 # Speed := { 1000 | 10000 | 40000 }
@@ -66,9 +65,10 @@ port_speed_3=1000   # front port 3
 port_speed_4=10000   # front port 4
 ...
 ```
+
 - Change Port Mode per Port
+  - vi /etc/ofdpa/accton.conf
 ```bash
-vi /etc/ofdpa/accton.conf
 ...
 # port_mode_<port> = Speed_Type [Interface Type]
 # Speed_Type:= { 1x40g | 4x10g }
@@ -129,3 +129,41 @@ port_mode_3=4x10g #Breakout cable
   - `onlpdump -s`
 - Show SFP information
   - `onlpdump -S`
+
+## Flow tables ID (OF-DPA 3.0.3)
+
+|Table Name | Table ID|
+|-----------|---------|
+|Ingress Port | 0 |
+|Port DSCP Trust | 5|
+|Port PCP Trust | 6|
+|Tunnel DSCP Trust | 7|
+|Tunnel PCP Trust | 8|
+|Injected OAM| 9|
+|VLAN | 10|
+|VLAN 1 | 11|
+|Ingress Maintenance Point | 12|
+|MPLS L2 Port | 13|
+|MPLS DSCP Trust | 15|
+|MPLS PCP Trust | 16|
+|L2 Policer | 18|
+|L2 Policer Actions | 19|
+|Termination MAC | 20|
+|L3 Type| 21|
+|MPLS 0 | 23|
+|MPLS 1 | 24|
+|MPLS 2 | 25|
+|MPLS-TP Maintenance Point | 26|
+|MPLS L3 Type| 27|
+|MPLS Label Trust | 28|
+|MPLS Type | 29|
+|Unicast Routing | 30|
+|Multicast Routing | 40|
+|Bridging | 50|
+|Policy ACL | 60|
+|Color Based Actions | 65|
+|Egress VLAN | 210|
+|Egress VLAN 1 | 211|
+|Egress Maintenance Point| 226|
+|Egress DSCP PCP Remark | 230|
+|Egress TPID | 235|
