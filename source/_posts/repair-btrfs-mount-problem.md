@@ -4,8 +4,11 @@ title: "Repair btrfs mount problem"
 description: ""
 date: 2015-07-20 00:00:00 +0800
 updated: 2015-07-20 00:00:00 +0800
-category: Infra 
+category:
+- Infra
+- Linux 
 tags:
+- linux
 - infra
 - btrfs
 - linux

@@ -4,8 +4,11 @@ title: "ArchLinux rescue mode"
 description: "Into rescue mode to change root passwd on ArchLinux"
 date: 2015-07-20 00:00:00 +0800
 updated: 2015-07-20 00:00:00 +0800
-category: Infra
+category:
+- Infra
+- Linux
 tags: 
+- linux
 - infra
 - linux
 ---

@@ -14,7 +14,7 @@ tags:
 ## Goal
 目標很簡單, 我只是想要在桌電裝一個 ESXi6.0 來玩玩, 遇到了一個硬碟找不到的問題, 幸好學弟有先寫了篇文章提醒, 這邊紀錄一下打 patch 的經過
 
-## Enviroment
+## Environment
 - G1 SNIPER Z97
 - E3-1231v3
 - 4GB Memory

@@ -4,7 +4,9 @@ title: "Install GNOME on Ubuntu server 14.04"
 description: ""
 date: 2015-07-25 00:00:00 +0800
 updated: 2015-07-25 00:00:00 +0800
-category: Infra
+category:
+- Infra
+- Linux
 tags: 
 - infra
 - ubuntu
