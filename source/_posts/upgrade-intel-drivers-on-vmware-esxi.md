@@ -20,6 +20,8 @@ Upgrade Intel NIC firmware (5.02->5.05) on VMWare ESXi for make sure the DirectP
 - Intel XL710
   - Including vmnic{2-5}
 
+<!--more-->
+
 ## Step
 
 ### Check Current Version
