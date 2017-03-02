@@ -17,7 +17,7 @@ tags:
 
 這專案已經開放 L2/L3 Protocol 相關的原始碼跟其架構貢獻給 [Open Comupter Project, OCP][2]，也把 Spec 公開在網路上 [FlexSwitch OCP Specification v0.1][3] 供大家參閱。當然若要理解 FlexSwitch 目前的架構，最準的還是以 [GitHub][4] 上的為主 
 
-最近他們跟 Dell/EMC 及另一個 Linux Foundation 底下的專案 [OpenSwitch][17] 在進行一些[整合][16]，這兩個專案之所以可以整合的原因是，SnapRoute 其實本身只是個 Debian Package，目前是建立在 [Open Network Linux, ONL][18] 之上，而 OpenSwitch 則跟 ONL 地位相當，故 SnapRoute 理論上可以疊加在 OpenSwitch 之上運行
+最近他們跟 Dell/EMC 及另一個 Linux Foundation 底下的專案 [OpenSwitch][17] 在進行一些[整合][16]，這兩個專案之所以可以整合的原因是，SnapRoute 其實本身只是個 Debian Package，目前是建立在 [Open Network Linux, ONL][18] 之上，而 OpenSwitch 則跟 ONL 地位相當，故 SnapRoute 理論上可以疊加在 OpenSwitch 之上運行，但 OpenSwitch 跟 SnapRoute L2/L3 功能互有重疊，不知道實際上要怎麼整，等後續他們的消息吧
 
 [SnapRoute 成立的小趣事][9]
 
@@ -44,7 +44,8 @@ tags:
 3. [GitHub - OpenSnaproute/reltools][13]
   - Main Project，執行 `fab setupDevEnv`
     - 如果遇到 rake last_comment 問題，起因是 [Apache Thrift][14] 專案的這行 [code][15]，遇到 rake version 大於 11.0.1 才會遇到，解法是請把 rake version 鎖定在 11.0
-    - 注意 PATH 的內容，建議是 ~/.bashrc 跟 /root/.bashrc 裡的變數要一樣 
+    - 注意 PATH 的內容，建議是 ~/.bashrc 跟 /root/.bashrc 裡的變數要一樣
+    - 如果遇到一些 git clone 問題，username 請填 `OpenSnapRoute`
 
 4. 編譯
 ```bash
