@@ -13,6 +13,7 @@ tags:
 ![SnapRoute Logo](https://1v51ha1y9z9f2hpq55t67p7a3u-wpengine.netdna-ssl.com/wp-content/uploads/2016/12/snaproute-logo-2016.jpg)
 
 ## Introduction to SnapRoute
+
 這是 2016 年 6 月左右一群 Apple Data Center 工程師們跑出來開的網路新創公司名叫 SnapRoute，而他們開發的產品則叫 FlexSwitch。
 
 這專案已經開放 L2/L3 Protocol 相關的原始碼跟其架構貢獻給 [Open Comupter Project, OCP][2]，也把 Spec 公開在網路上 [FlexSwitch OCP Specification v0.1][3] 供大家參閱。當然若要理解 FlexSwitch 目前的架構，最準的還是以 [GitHub][4] 上的為主 
