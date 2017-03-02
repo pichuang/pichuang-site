@@ -10,23 +10,29 @@ tags:
 - flexswitch
 ---
 
+![SnapRoute Logo](https://1v51ha1y9z9f2hpq55t67p7a3u-wpengine.netdna-ssl.com/wp-content/uploads/2016/12/snaproute-logo-2016.jpg)
+
 ## Introduction to SnapRoute
 這是 2016 年 6 月左右一群 Apple Data Center 工程師們跑出來開的網路新創公司名叫 SnapRoute，而他們開發的產品則叫 FlexSwitch。
 
 這專案已經開放 L2/L3 Protocol 相關的原始碼跟其架構貢獻給 [Open Comupter Project, OCP][2]，也把 Spec 公開在網路上 [FlexSwitch OCP Specification v0.1][3] 供大家參閱。當然若要理解 FlexSwitch 目前的架構，最準的還是以 [GitHub][4] 上的為主 
 
-[成立公司的小趣事][9]
+最近他們跟 Dell/EMC 及另一個 Linux Foundation 底下的專案 [OpenSwitch][17] 在進行一些[整合][16]，這兩個專案之所以可以整合的原因是，SnapRoute 其實本身只是個 Debian Package，目前是建立在 [Open Network Linux, ONL][18] 之上，而 OpenSwitch 則跟 ONL 地位相當，故 SnapRoute 理論上可以疊加在 OpenSwitch 之上運行
+
+[SnapRoute 成立的小趣事][9]
 
 ## Support Platform
 
-依據 [Source code - reltools/pkgInfo.json L7][5]，目前支援以下平台:
+依據 [Source code - reltools/pkgInfo.json][5]，目前支援以下平台:
 - [Accton/Edgecore AS5712-54X/T][6]
 - [Accton/Edgecore Wedge40][7]
 - [Accton/Edgecore Wedge100][8]
 - Celestica Redstone
 - Docker
 
-## Hands-on
+<!--more-->
+
+## Installation Process
 
 既然這專案是 OpenSource 想當然爾是可以自己動手編譯的，參考文件順序如下:
 
@@ -37,8 +43,8 @@ tags:
 
 3. [GitHub - OpenSnaproute/reltools][13]
   - Main Project，執行 `fab setupDevEnv`
-    - 如果遇到 rake last_comment 問題，起因是 [Apache Thrift][14] 專案的這行 [code][15]，若遇到 rake version 大於 11.0.1 才會遇到，解法請把 rake version 鎖定在 11.0
-    - 注意 PATH
+    - 如果遇到 rake last_comment 問題，起因是 [Apache Thrift][14] 專案的這行 [code][15]，遇到 rake version 大於 11.0.1 才會遇到，解法是請把 rake version 鎖定在 11.0
+    - 注意 PATH 的內容，建議是 ~/.bashrc 跟 /root/.bashrc 裡的變數要一樣 
 
 4. 編譯
 ```bash
@@ -60,12 +66,14 @@ flexswitch_docker-pichuang_1.0.0.171.44_amd64.deb
 ```bash
 dpkg -i flexswitch_bcm_accton_as5712-pichuang_1.0.0.171.44_amd64.deb && apt install -f
 ```
+  - Open Network Linux 版本建議 `2016.12.22.18.28.604af0c9b3dc9504870c30273ab22f2fb62746c3`
 
 7. WEB UI
 ```
 http://<ip>:8080/api-docs/#
 ```
 ![FlexSwitch Screen Shot](https://lh3.googleusercontent.com/5KzExo8JTIMKfZEnLtsCHcRphWCMzG4Tk5Bxhfo2swc3lElhuZJGnoVslycPlpV2IFvdYXmutnplvL00cKbG6xaL5MODPq2dmWztFghMhrPd4pXLrM0TotzGcyWjqhPLXsz7RZhf-0sIeUzIs010LdW0PI_8Q1S4848guBDjlHuxCYSn4DtNngVSLWFm43dZQJS4qhn3XKrVB6yGwjnOsAG_6Uc9u093k6511QYPRTT6sPW2Hnio-uXLrlDwnZ7utRDepXzMmyUwLmuZQ-S_dILTaHrOE63Yy_f9RAGswG6cYdFpb00GzrsSvOKaWqvqrrCL7VNENutA6PzXzl8w69fexVLJagDKaowrWIuaUFRkhG7UauHwO2FFXKj5uAWnCdXwjnno-H-mJXFc_fwX3IPxOzvXCBGJzCHIaStL7uTJS9Y7WRKebw283aHdJ_9aXoPOZGYIdj2qY6Y-wfBj9xqC8hFBRXqiwgqmKjDDgZpm5yWEdjeVsAP2WYYSeDbV1yK2pZs1xkVNLL4ETEqht_8ltmNiTHWPiXf5u8nsRsyN0vxen81_GCucfnegnLuX-AuXI2_-fte46NS1578ZNLt-t_ySaZ-dY1syhYisO75HGFhft0NGXg=w1948-h626-no)
+
 
 ## Reference
 - [SnapRoute][1]
@@ -88,3 +96,6 @@ http://<ip>:8080/api-docs/#
 [13]: https://github.com/OpenSnaproute/reltools
 [14]: https://github.com/OpenSnaproute/reltools/blob/master/fabfile.py#L212
 [15]: https://github.com/apache/thrift/blob/master/lib/rb/thrift.gemspec#L35
+[16]: https://www.linuxfoundation.org/announcements/snaproute-and-dell-emc-to-help-advance-linux-foundation%E2%80%99s-openswitch-project
+[17]: http://www.openswitch.net/
+[18]: https://opennetlinux.org/
