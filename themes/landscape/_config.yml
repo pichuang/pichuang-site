@@ -14,8 +14,8 @@ widgets:
 - category
 - tag
 - tagcloud
-- archive
 - recent_posts
+#- archive
 
 # display widgets at the bottom of index pages (pagination == 2)
 index_widgets:
@@ -30,7 +30,12 @@ show_count: false
 # Miscellaneous
 google_analytics: UA-90856047-1
 favicon: /favicon.png
-twitter: pichuang-tw
+twitter: pichuang_tw
 google_plus:
 fb_admins:
 fb_app_id:
+speakerdeck: pichuang
+facebook: paulintoro
+linkedin: phil-huang-09b09895
+github: pichuang
+
