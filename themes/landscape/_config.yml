@@ -2,6 +2,7 @@
 menu:
   Home: /
   Archives: /archives
+#  CV: /CV
 rss: /atom.xml
 
 # Content

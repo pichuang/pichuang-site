@@ -1,0 +1,216 @@
+{
+  "basics": {
+    "name": "Phil Huang",
+    "label": "SDN Active Contributor and Promoter",
+    "picture": "",
+    "email": "inceptioninx@gmail.com",
+    "website": "http://blog.pichuang.com.tw",
+    "summary": "Phil comes from Taiwan. He currently works at Edgecore Networks as an SDN solution engineer. Before joining Edgecore Networks, he worked for Computer Center of CS department while pursuing M.S. degree. He also has been leading a community of SDN/NFV technology and communication in Taiwan. His work and interest focus on design and deployment SDN/NFV commercial/opensource solutions for customers. Moreover, he is an active engineer with strong NetDevOps & DevOps concept and experiences in Linux and SDN opensource projects. Phil earned his M.S. degree of CS from National Chiao Tung University and B.S. degree of CS from Tunhai University.",
+    "location": {
+      "address": "",
+      "postalCode": "600",
+      "city": "Chiayi City",
+      "countryCode": "TW",
+      "region": "Taiwan"
+    },
+    "profiles": [
+      {
+        "network": "Twitter",
+        "username": "pichuang_tw",
+        "url": "https://twitter.com/pichuang_tw"
+      },
+      {
+        "network": "Github",
+        "username": "pichuang",
+        "url": "https://github.com/pichuang"
+      },
+      {
+        "network": "Speaker Deck",
+        "username": "pichuang",
+        "url": "https://speakerdeck.com/pichuang"
+      },
+      {
+        "network": "Linkedin",
+        "username": "phil-huang",
+        "url": "https://www.linkedin.com/in/phil-huang-09b09895"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "Edgecore Networks",
+      "position": "SDN Solution Engineer",
+      "website": "http://www.edge-core.com/",
+      "startDate": "2016-07-20",
+      "endDate": "Currently employed",
+      "summary": "Proactively scopes SDN technical solutions required to address customer requirements, assesses customers’ met and unmet needs, and recommends solutions that optimize value for both the client and the firm to make PoC successful.",
+      "highlights": [
+        "Technical support with CumulusLinux / Pica8 / BigSwitch / ONL solutions",
+        "Secures from customer technical staff commitments needed to ensure a deal’s “technical close”",
+        "Provides coaching and professional development to team member associates to enhance their product knowledge, technical acumen, and technical skills"
+      ]
+    },
+    {
+      "company": "CS Computer Center, NCTU",
+      "position": "Graduate Teaching Assistant",
+      "website": "https://www.cs.nctu.edu.tw/cchonor/home",
+      "startDate": "2013-09-03",
+      "endDate": "2016-06-04",
+      "summary": "Responsible for overseeing the day-to-day operations of the team, distributing the workload evenly amongst TAs and making sure quality and performance levels are maintained.",
+      "highlights": [
+        "Headman with all of TAs / Linux / Windows team",
+        "Build DevOps culture and tools from scratch and push it into IT management",
+        "Provides team leadership and coaching to help team members"
+      ]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "SDNDS TW",
+      "position": "Co-Founder",
+      "website": "http://sdnds.tw",
+      "startDate": "2014-08-23",
+      "endDate": "Currently employed",
+      "summary": "SDN Developer Society in Taiwan is a community-driven group which can connect with SDN / NFV industry, education.",
+      "highlights": [
+        "Dissemination of SDN / NFV technology introduced locally",
+        "Provide technical presentations to the community and educational institutions"
+      ]
+    },
+    {
+      "organization": "ONOS/CORD Ambassadors Program",
+      "position": "Ambassdor",
+      "website": "https://wiki.onosproject.org/display/AM/Phil+Huang",
+      "startDate": "2016",
+      "endDate": "Currently employed",
+      "summary": "Represent the ONOS/CORD community and promote ON.LAB project in Taiwan",
+      "highlights": [
+        "Publish speech 5 times about ONOS/CORD topics locally in 2016",
+        "Bridge the community with education institution and company who interesting with ONOS/CORD"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "National Chiao Tung University, Taiwan",
+      "area": "Computer Science",
+      "studyType": "Master",
+      "startDate": "2013-09-03",
+      "endDate": "2016-06-04",
+      "gpa": "",
+      "courses": [
+        "IOC5141 - Computer and Network System Administration Lab",
+        "IOE5033 - Wireless Internet"
+      ]
+    },
+    {
+      "institution": "Tunghai University, Taiwan",
+      "area": "Computer Science",
+      "studyType": "Bachelor",
+      "startDate": "2009-06",
+      "endDate": "2012-06",
+      "gpa": "",
+      "courses": [
+        "4351 - Cluster Computation and Application",
+        "4556 - Parallel, Cluster and Grid Computing"
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "3rd Place, Taiwan Student Cluster Competition",
+      "date": "2012",
+      "awarder": "National Center for High-Performance Computing",
+      "summary": "Mainly aimed at system and network high-performance tuning and parallel-processing computing"
+    }
+  ],
+  "publications": [
+    {
+      "name": "Global ONOS SDN-IP Deployment, NCTU, Taiwan",
+      "publisher": "SDN, ONOS, SDN-IP",
+      "releaseDate": "2016 Q1",
+      "website": "https://youtu.be/a8LR1DyzGY4",
+      "summary": "Lead technical team at Taiwan (Include NCTU, NCHC, Edgecore Networks) to join ON.LAB SDN-IP deployment plan within 3 weeks before ONS 2016"
+    },
+    {
+      "name": "Distributed OpenNet",
+      "publisher": "SDN, Emulator, Mininet, NS3",
+      "releaseDate": "2016",
+      "website": "https://github.com/dlinknctu/OpenNet",
+      "summary": "An emulator for Software-Defined Wireless Local Area Network and Software-Defined LTE Backhaul Netowrk. My focus on scale-out the environment for SDN emulation and build automation tool within install processes."
+    }
+  ],
+  "skills": [
+    {
+      "name": "Software-defined Networking",
+      "level": "Working knowledge",
+      "keywords": [
+        "Vertical hardware and software troubleshooting",
+        "Design PoC deployment plan and implement"
+      ]
+    },
+    {
+      "name": "Infrastructure as Code tools",
+      "level": "Working knowledge",
+      "keywords": [
+        "Ansible",
+        "Docker",
+        "Git"
+      ]
+    },
+    {
+      "name": "Language",
+      "level": "Working knowledge",
+      "keywords": [
+        "Python",
+        "Shell script",
+        "Java"
+      ]
+    },
+    {
+      "name": "System",
+      "level": "Expert",
+      "keywords": [
+        "Linux (ArchLinux, Ubuntu, CentOS)",
+        "FreeBSD",
+        "Windows"
+      ]
+    },
+    {
+      "name": "Hypervisor",
+      "level": "Working knowledge",
+      "keywords": [
+        "VMWare ESXi / vSphere",
+        "OpenStack"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Mandarin",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "English",
+      "fluency": "Intermediate"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Travel",
+      "keywords": [
+        "China / Singapore / Japan / US",
+        "In-depth travel for understanding other cultures"
+      ]
+    },
+    {
+      "name": "Reading",
+      "keywords": [
+        "Network and Linux",
+        "Psychology"
+      ]
+    }
+  ],
+  "references": []
+}
+
