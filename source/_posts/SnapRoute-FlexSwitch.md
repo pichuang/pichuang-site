@@ -25,7 +25,7 @@ tags:
 ## Support Platform
 
 依據 [Source code - reltools/pkgInfo.json][5]，目前支援以下平台:
-- [Accton/Edgecore AS5712-54X/T][6]
+- [Accton/Edgecore AS5712-54X][6]
 - [Accton/Edgecore Wedge40][7]
 - [Accton/Edgecore Wedge100][8]
 - Celestica Redstone
@@ -83,6 +83,12 @@ More: [FlexSwitch API][19]
 - [Open Compute Project][2]
 - [FlexSwitch OCP Specification v0.1][3]
 - [GitHub - OpenSnapRoute][4]
+- [List of Network Operating Systems][20]
+
+## 社群服務
+
+本人的文章大多都會發布在 [SDNDS-TW](https://www.facebook.com/groups/sdnds.tw/)。這社團文章都跟 SDN/NFV 國內外產業新聞或資訊有關，有任何技術問題也歡迎在上面詢問。
+![SDNDS-TW Facebook Group](https://lh3.googleusercontent.com/KizynpieyTlykuyk-po1tgasnVI4Oxl9_vPXXpHYyj_JiUc0V5bRb8lHxGpZDQiTqMNCn_A6NqF-4Gx8KMex8XsjgdCGByIqtIpKBc4TvQoUtNtXf0RK_eBf2pwm8wNJRiWXfkz3vf6Tf465o2vzmH2G4iR28kf_Wc_ADeqDJDfQQlV0XTtQcSBBRG2N-zs1ue6dhg38lMoO47n0-SI6yl3x-HhyRIK8penHyHXe0i9q08IDqYEdtMGyKExcihESNthqc4r74kceAJUYhfqsFRpGLteEMXDkShC74r79Frr5aVwsYml0x1WVHkmXbxLZB381B0gkJWUXaoCeCC8rdeYtb6vn60vLsNYgYLRI0wT0VjEbJTCgcHUbNk8sBkXEiATLTKQiES5VcIEJ9nQ7FYTxsF8BiB7exUxr0b3kfTLVJF2RBqc0hpHojoiMh-nL-OY30a9rgf1vr4n-44sDGfa8-f7xWX3JEe-7RgNjwZ5glxGM1lkrf2_MHwbgVRNd2tzUrxmRNmMrVpFog-NcByDo824K8GJLxyLq0Dg12jkx90uOBKmhAE-_JUL5iIYzzUUKGJu1-ORReKmYR63UvTeUvwtxSEKUnpax4co6s6dQoS2f5bB37Q=w1652-h590-no)
 
 [1]: https://snaproute.com/
 [2]: http://opencompute.org/
@@ -103,3 +109,4 @@ More: [FlexSwitch API][19]
 [17]: http://www.openswitch.net/
 [18]: https://opennetlinux.org/
 [19]: https://drive.google.com/open?id=0B19ucAmtemIQYkZhX2FUYi13QTA
+[20]: http://packetpushers.net/virtual-toolbox/list-network-operating-systems/
