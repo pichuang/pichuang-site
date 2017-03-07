@@ -20,8 +20,10 @@ tags:
 
 | Spec     | Full name |
 |----------|----------------------------------------------------|
-| [SFF-8472][1] | Diagnostic Monitoring Interface for Optical Transceivers |
+| [SFF-8024][12]| SFF Committee Cross Reference to Industry Products |
 | [SFF-8436][4] | Quad Small Form-factor pluggable SFF-8436 (QSFP+) |
+| [SFF-8472][1] | Diagnostic Monitoring Interface for Optical Transceivers (SFP+) |
+| [SFF-8636][11]| Management Interface for Cabled Environments |
 | [SFF-8665][3] | QSFP+ 28 Gb/s 4X Pluggable Transceiver Solution (QSFP28) |
 
 More information: [SNIA Public Documents][6]
@@ -41,6 +43,9 @@ More information: [SNIA Public Documents][6]
   - Electrical: SFF-8431, SFF-8083
   - Mechanical: SFF-8432
   - EEPROM: [SFF-8472][1]
+
+- 25Gb/s SFP28 DAC
+  - EEPROM: [SFF-8402][13]
 
 - 40Gb/s QSFP+ DAC
   - IEEE 802.3ba (40GbE or 100GbE)
@@ -178,6 +183,7 @@ Alarm/warning flags implemented           : No
 - [Cumulus Networks Official Website][7]
 - [Wiki - American Wire Gauge, AWG][8]
 - [SFF-8024 SFF Committee Cross Reference to Industry Products][9]
+- [100G & 25G Plugfests: What we learned - Cumulus Networks][10]
 
 ## 社群服務
 
@@ -193,3 +199,7 @@ Alarm/warning flags implemented           : No
 [7]: https://cumulusnetworks.com/
 [8]: https://en.wikipedia.org/wiki/American_wire_gauge
 [9]: https://ta.snia.org/kws/public/download/134/8024_039.PDF
+[10]: https://cumulusnetworks.com/blog/100g-25g-plugfests-learned/
+[11]: https://ta.snia.org/kws/public/download/329/SFF-8636.PDF
+[12]: https://ta.snia.org/kws/public/download/134/8024_039.PDF
+[13]: https://ta.snia.org/kws/public/download/329/SFF-8402.PDF
