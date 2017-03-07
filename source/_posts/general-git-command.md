@@ -62,3 +62,4 @@ tags:
 Reference
 ---------
 - [learnGitBranching](http://pcottle.github.io/learnGitBranching/)
+- [git-tips](https://github.com/git-tips/tips)
