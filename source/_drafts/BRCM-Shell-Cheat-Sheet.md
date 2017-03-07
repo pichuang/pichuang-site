@@ -46,10 +46,10 @@ tags:
   - Forces link scan to update ports status instanly
 
 
-
-
-
 ## Reference
 - [shell命令的使用][1]
+- [bcm shell常用调试命令][2]
 
 [1]: http://www.51wendang.com/doc/245fa102e4805cfef0de8a66/
+[2]: http://mixin125.m.blog.chinaunix.net/uid-22238267-id-5748466.html
+[3]: http://www.cnblogs.com/helloworldtoyou/p/5177932.html
