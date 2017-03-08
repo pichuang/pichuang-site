@@ -48,7 +48,7 @@ resolvconf -u
 ### OF Agent App
 - Enable ofagentapp service
   - `launcher ofagentapp --controller=<CONTROLLER_IP>:6653 --listen=<SWITCH_MA1_IP>:6633`
-  - Example: [start_ofagentapp.sh](https://gist.github.com/pichuang/7f35e6313f0339ac7fff96af3832d8d2)
+  - More detailes [How to enable debugging mode on OF-DPA][2]
 - Stop ofagentapp
   - `pkill ofagentapp`
 
@@ -167,3 +167,10 @@ port_mode_3=4x10g #Breakout cable
 |Egress Maintenance Point| 226|
 |Egress DSCP PCP Remark | 230|
 |Egress TPID | 235|
+
+## Reference
+- [OF-DPA文档读后感][1]
+- [How to enable debugging mode on OF-DPA][2]
+
+[1]: http://www.lai18.com/content/9682257.html
+[2]: https://edge-core.github.io/How-to-enable-debugging-mode-on-OF-DPA/
