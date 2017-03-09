@@ -89,3 +89,10 @@ social:
   Email: phil_huang@edge-core.com
 
 google_analytics: UA-90856047-1
+
+sitemap:
+  path: sitemap.xml
+
+robotstxt:
+  useragent: "*"
+  sitemap: http://blog.pichuang.com.tw/sitemap.xml
