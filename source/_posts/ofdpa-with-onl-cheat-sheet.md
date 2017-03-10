@@ -19,20 +19,24 @@ tags:
   - ONL version
     - [ONL-2.0.0-ONL-OS-DEB8-2016-12-22.1828-604af0c-AMD64-INSTALLED-INSTALLER](http://opennetlinux.org/binaries/2016.12.22.18.28.604af0c9b3dc9504870c30273ab22f2fb62746c3/ONL-2.0.0-ONL-OS-DEB8-2016-12-22.1828-604af0c-AMD64-INSTALLED-INSTALLER)
   - OF-DPA version 
-    - [ofdpa_3.0 EA3](https://github.com/onfsdn/atrium-docs/blob/master/16A/ONOS/builds/ofdpa_3.0.3.1%2Baccton1.4~1-1_amd64.deb)
+    - [ofdpa_3.0 EA4](https://github.com/onfsdn/atrium-docs/raw/1f6cd3fe6d5f79fb2eab54ce6c916c22a3d6a551/16A/ONOS/builds/ofdpa_3.0.4.0%2Baccton1.0~1-1_amd64.deb)
 
 ### Set Base configuration
-1. vi /mnt/onl/data/rc.boot 
+1. vi /etc/network/interface
 ```bash
-#!/bin/bash
-ip addr add 192.168.11.2/24 dev ma1
-ip route add default via 192.168.11.254
-hostname edgecore-5712
-echo "nameserver 168.95.1.1" > /etc/resolvconf/resolv.conf.d/base
-resolvconf -u
+auto ma1
+iface ma1 inet static
+address 192.168.11.2
+netmask 255.255.255.0
+gateway 192.168.11.254
 ```
-2. chmod +x /mnt/onl/data/rc.boot
-  - rc script: `/etc/boot.d/52.rc.boot`
+ 
+2. vi /etc/resolvconf/resolv.conf.d/base
+```
+nameserver 168.95.1.1
+```
+- `resolvconf -u`
+
 
 ### Rate Limit
 - Setting Rate Limit per queue 

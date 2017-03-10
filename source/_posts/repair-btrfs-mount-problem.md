@@ -14,7 +14,7 @@ tags:
 - linux
 ---
 
-假設有問題的硬碟為 ```/dev/sda3```
+假設有問題的硬碟為 `/dev/sda3`
 
 1. 清除 cache
 `mount -t btrfs -o recovery,nospace\_cache,clear\_cache,autodefrag /dev/sda3 /mnt`
