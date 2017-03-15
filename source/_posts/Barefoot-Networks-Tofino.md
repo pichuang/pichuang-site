@@ -20,11 +20,12 @@ tags:
 * 語言 [`P4`][3]
 * 晶片 `Tofino`
   - 6.5Tb/s (65 x 100GbE or 260 x 25GbE) fully user-programmable switch
+  - 3.2Tb/s
   - 原生支援 `P4`
 * IDE `Capilano`
   - 整合 P4 編譯器及除錯器的 IDE
   - P4 模擬器
-  - 整合七家不同的 Newwork OS 包含 OpenSwitch (Hewlett Packard Enterprise), SONiC (Microsoft Azure), and FBOSS (Facebook).
+  - 整合七家不同的 Network OS 包含 OpenSwitch (SnapRoute/Dell EMC), SONiC (Microsoft Azure), and FBOSS (Facebook).
 
 極度推薦閱讀 [The World's Fastest & Most Programmable Networks - Barefoot Networks whitepaper][11]
 
@@ -32,8 +33,10 @@ tags:
 根據新聞指出 [Barefoot Lands Edgecore and WNC for its Ethernet Switching Chip][7]，兩家都是台灣的 ODM 廠商，支援的平台如下:
 - Accton/Edgecore Wedge100BF-32X
   - 32x100GbE
+  - Facebook OCP Wedge series
 - Accton/Edgecore Wedge100BF-65X
   - 65x100GbE
+  - Facebook OCP Wedge series
 - WNC OSW1800
   - 48x25GbE + 6x100GbE
 - WNC OSW6500
