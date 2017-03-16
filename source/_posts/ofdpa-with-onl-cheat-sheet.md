@@ -43,7 +43,8 @@ nameserver 168.95.1.1
   - `client_queue_config <queueId> <intIfNum> <minRate> <maxRate>` 
     - queyeID := [ 0 - 7 ] 
   - ex: `client_queue_config 0 2 1 1000` 
-    - Queue 0, Port 2, 最小速率 1 Mbps, 最大 1000 Mbps 
+    - Queue 0, Port 2, 1 means minimal 0.1%, 1000 means Maximum 100%
+    - Min and Max queue rates must range between 1-1000 
 - Show Rate Limit per queue 
   - `client_queue_config <queueId> <intIfNum>` 
   - ex: `client_queue_config 1 1` 

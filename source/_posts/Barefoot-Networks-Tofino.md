@@ -19,8 +19,7 @@ tags:
 
 * 語言 [`P4`][3]
 * 晶片 `Tofino`
-  - 6.5Tb/s (65 x 100GbE or 260 x 25GbE) fully user-programmable switch
-  - 3.2Tb/s
+  - 6.5Tb/s (65 x 100GbE or 260 x 25GbE) and 3.2Tb/s fully user-programmable switch
   - 原生支援 `P4`
 * IDE `Capilano`
   - 整合 P4 編譯器及除錯器的 IDE
