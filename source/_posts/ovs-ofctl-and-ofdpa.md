@@ -2,7 +2,7 @@
 layout: post
 title:  "OpenvSwitch ovs-ofctl and OF-DPA"
 date:   2017-01-06 13:42:10 +0800
-updated: 2017-01-06 00:00:00 +0800
+updated: 2017-03-21 00:00:00 +0800
 category: sdn
 tags:
 - sdn
@@ -27,11 +27,14 @@ Remote control and management OF-DPA via ovs-ofctl
     - OF-DPA version
       - [ofdpa_3.0 EA4](https://github.com/onfsdn/atrium-docs/blob/master/16A/ONOS/builds/ofdpa_3.0.4.0%2Baccton1.0~1-1_amd64.deb)
     - `You need launch ofappagent first`. If you dont know how to start it. Please refer [OF-DPA with ONL Cheat Sheet](http://blog.pichuang.com.tw/ofdpa-with-onl-cheat-sheet)
+    - Command
+      - `launcher ofagentapp -a2 -d4 -c1 -c2 -c3 -c4 -c5 -l 0.0.0.0:6633`
 - Contorl VM
   - IP: 192.168.13.2
   - OpenvSwitch
     - 2.7.0
     - In this case, we just use `ovs-ofctl`, and it's also work if you want to use dpctl which CPqD provide
+    - [How to Install OpenvSwitch][]
 
 ### Basic Command
 ```bash
@@ -147,6 +150,10 @@ OFPST_PORT reply (OF1.3) (xid=0x2): 32 ports
 ```
 
 ## Reference
-- [ovs-ofctl](http://openvswitch.org/support/dist-docs/ovs-ofctl.8.txt)
-- [Pica8 OVS Configuration Guide 2.8.0](http://www.pica8.com/wp-content/uploads/2015/09/v2.8/html/ovs-configuration-guide/)
+- [ovs-ofctl][1]
+- [Pica8 OVS Configuration Guide 2.8.0][2]
+- [Compile OpenvSwitch - pichuang][3]
 
+[1]: http://openvswitch.org/support/dist-docs/ovs-ofctl.8.txt
+[2]: http://www.pica8.com/wp-content/uploads/2015/09/v2.8/html/ovs-configuration-guide/
+[3]: http://blog.pichuang.com.tw/compile-openvswitch/
