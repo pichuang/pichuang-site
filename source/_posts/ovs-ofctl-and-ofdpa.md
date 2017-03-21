@@ -17,61 +17,134 @@ Remote control and management OF-DPA via ovs-ofctl
 
 ## Environment
 - Switch
-  - IP: 192.168.11.2
+  - IP: 192.168.13.14
   - Hardware
     - Model
-      - [Edgecore AS5712-54X](http://www.edge-core.com/productsInfo.php?cls=1&cls2=8&cls3=44&id=15)
+      - [Edgecore AS6712-54X](http://www.edge-core.com/productsInfo.php?cls=1&cls2=7&cls3=43&id=12)
   - Software
     - ONL version
       - [ONL-2.0.0-ONL-OS-DEB8-2016-12-22.1828-604af0c-AMD64-INSTALLED-INSTALLER](http://opennetlinux.org/binaries/2016.12.22.18.28.604af0c9b3dc9504870c30273ab22f2fb62746c3/ONL-2.0.0-ONL-OS-DEB8-2016-12-22.1828-604af0c-AMD64-INSTALLED-INSTALLER)
     - OF-DPA version
-      - [ofdpa_3.0 EA3](https://github.com/onfsdn/atrium-docs/blob/master/16A/ONOS/builds/ofdpa_3.0.3.1%2Baccton1.4~1-1_amd64.deb)
+      - [ofdpa_3.0 EA4](https://github.com/onfsdn/atrium-docs/blob/master/16A/ONOS/builds/ofdpa_3.0.4.0%2Baccton1.0~1-1_amd64.deb)
     - `You need launch ofappagent first`. If you dont know how to start it. Please refer [OF-DPA with ONL Cheat Sheet](http://blog.pichuang.com.tw/ofdpa-with-onl-cheat-sheet)
 - Contorl VM
-  - IP: 192.168.11.1
+  - IP: 192.168.13.2
   - OpenvSwitch
-    - 2.6.9
+    - 2.7.0
     - In this case, we just use `ovs-ofctl`, and it's also work if you want to use dpctl which CPqD provide
 
-### Install ofdpa-ofctl script (Optional)
+### Basic Command
 ```bash
-cat <<'EOF' >> /usr/local/bin/ofdpa-ofctl
-#!/bin/bash
-SWITCH_IP="192.168.11.2"
-OPTS="-O OpenFlow13 tcp:$SWITCH_IP:6633"
-
-if [ -n "$1" ]; then
-    ovs-ofctl $1 $OPTS
-else
-    ovs-ofctl -h
-fi
-EOF
-chmod +x /usr/local/bin/ofdpa-ofctl
+ovs-ofctl show -O OpenFlow13 tcp:192.168.13.14:6633
 ```
-- Same as `ovs-ofctl`
 
 ### Usage
 
 #### Show port information
-- `ofdpa-ofctl show`
-![screenshot-ovs-ofctl-show](https://lh3.googleusercontent.com/tKLPupRqIMcNsuPBugLxYQg6DB4klz3vPBECqYSa_T7MD2l0IRZyIl_6kq6uLX7cmfuFwWx-VCjoPtC2nHUJ5Xn1aVTq5nRR2NKTxOS5l5y3-7YwgJHKZGdCgqQsEgeIJNxfPYrRAtBqs5a-38OLVEIrfh6Pb0GYZkgl2VoNB7nNY2wMXh6KX7g-voYhklH1XCEkXaajRGQz4zg3vbKQpqC1lS9sgGFQVCqwsLGZoz2lne0kkfCEW3yn9TMXs7PPcvVBtmGJBH97v-Gx4CV-no-vTHmWXbe6v2bWEIhJB_oFhKPZILu2K05jHsA68f426VvN6uIT4bfxVA7i9sl90EJbD3aGZdfnyPqrnpsbsaHDuFCXkIbXvixrv1HtKrStubBPyKpW37_cCjBj3YdDmcloB_Wi7caqSxyw-KSYQv6mlPJ4RPFiScXvbWpj_wF7bxLxYwxLpQbo8qIoPExQTwjPp6O7ZVR0XGtcQcn5jAD8L3ur895qLAo55abBZ7-Tv-filg_PIbRKdej2q-twvCGRbspOO7m76f6ekuccyMBfkEYlleUjY39WowfzWCkt7tqoi-1rSVDW5Px9PqXl0Sh-1sn1rEK_7SGru7XDIzecQP3__CVz=w1566-h1060-no)
+- `ovs-ofctl show -O OpenFlow13 tcp:192.168.13.14:6633`
+- Output
+```bash
+$ ovs-ofctl show -O OpenFlow13 tcp:192.168.13.14:6633
+OFPT_FEATURES_REPLY (OF1.3) (xid=0x2): dpid:000000000000da7a
+n_tables:23, n_buffers:0
+capabilities: FLOW_STATS TABLE_STATS PORT_STATS QUEUE_STATS
+OFPST_PORT_DESC reply (OF1.3) (xid=0x3):
+ 1(port1): addr:cc:37:ab:d0:d6:30
+     config:     0
+     state:      LINK_DOWN
+     current:    40GB-FD FIBER
+     supported:  10MB-FD 100MB-FD 1GB-FD 10GB-FD 40GB-FD OTHER FIBER AUTO_NEG AUTO_PAUSE AUTO_PAUSE_ASYM
+     speed: 40000 Mbps now, 40000 Mbps max
+ 2(port2): addr:cc:37:ab:d0:d6:30
+     config:     0
+     state:      LINK_DOWN
+     current:    40GB-FD FIBER
+     supported:  10MB-FD 100MB-FD 1GB-FD 10GB-FD 40GB-FD OTHER FIBER AUTO_NEG AUTO_PAUSE AUTO_PAUSE_ASYM
+     speed: 40000 Mbps now, 40000 Mbps max
+...
+```
 
 #### Show tables information
-- `ofdpa-ofctl dump-tables`
-![screenshot-ovs-ofctl-dump-tables](https://lh3.googleusercontent.com/adiWa4tuPFAuRm4uv7OXdwxq5r6bwOlTDpdMUFCn1ID6KXANtE7VgCqAg8pF21u-8a-T2584d5MiemV8fIw1BH-FP6pQy88SGi3h6CH0E_8IA_apF0fvdUfZFvrX3owYnGouihbPmml2oP38nc_ZsDD3bJnVjOaWaeqh68NKoeOvdvjHXrEwTQ5wXnQiny3Cvqi1KoKK5lk7jaCkagOaZWztslp2KfRTFxQrZepj8sDtstwcgUJNctP0ZQWmcyx96a-LOHni6MlqWzs_P1cw2xxRCC9mZBnczazSwBU1n2KGr2IS3Oeu-44kO2rMsMwQSOgh-cCCv1m6nTTD-XscIRuwjmJctZaMgvipEUKTn8wKVwd7Cz-aYV6tEDQ44LajnBKzJdNjWbESzIVNHy_yo_S8pRnxQpJGOVlErgSKGMQB5_ZBkxAuXAB-_d_dBno6hrdu-ewBxZFS636mqDa39Tn158fpJx8yS6vQoYcvfzVNkmsywilc4w0lRMMybELAV3mob04z8RbhXRY34I7VquaNQbQxNZ7i-m-CA5fdtLvbTPiRULVwHegNT-88dTT7yReRqmBNQq_i7GuDP5dQtrqhtvQN7_bXwNPovF59BWdiRJ2A1LZw=w586-h1406-no)
+- `ovs-ofctl dump-tables`
+- Output
+```bash
+$ ovs-ofctl dump-tables -O OpenFlow13 tcp:192.168.13.14:6633
+OFPST_TABLE reply (OF1.3) (xid=0x2):
+  table 0:
+    active=0, lookup=0, matched=0
+
+  table 5: ditto
+  table 6: ditto
+  table 7: ditto
+  table 8: ditto
+  table 10: ditto
+  table 11: ditto
+  table 13: ditto
+  table 15: ditto
+  table 16: ditto
+  table 17: ditto
+  table 20: ditto
+  table 24: ditto
+  table 28: ditto
+  table 30: ditto
+  table 40: ditto
+  table 50: ditto
+  table 60: ditto
+  table 65: ditto
+  table 210: ditto
+  table 211: ditto
+  table 230: ditto
+  table 235: ditto
+```
+
+#### Add flow entry
+- `ovs-ofctl add-flow -O OpenFlow13 tcp:192.168.13.14:6633 table=60,priority=40000,eth_type=0x0800,ip_dst=55.55.55.55,actions=controller`
 
 #### Show flow entries
-- `ofdpa-ofctl dump-flows`
+- `ovs-ofctl dump-flows`
+- Output
+```bash
+$ ovs-ofctl dump-flows -O OpenFlow13 tcp:192.168.13.14:6633
+OFPST_FLOW reply (OF1.3) (xid=0x2):
+ cookie=0x0, duration=46.570s, table=60, n_packets=0, n_bytes=0, priority=40000,ip,nw_dst=55.55.55.55 actions=CONTROLLER:65535
+```
 
 #### Show queue stats
-- `ofdpa-ofctl queue-stats`
-![screenshot-ovs-ofctl-queue-stats](https://lh3.googleusercontent.com/QvogwdWFxfC7FNYe_r16HGBI9BrP1RArXsUOkBCYabr-PodbErqEtFHwc0xlln-JNaxFz4xiLYAfq3YZ9edg2PvOY3Mi07icXCsghfktguXmyxtShhgOLVVLJsxJ2ZWPFuTCSnrUa-9vDcIYwAUIo33qyHWc5Kqp2zgOGNXHAN5CeByDN7lNhbgYDI8zb5qVtaWhBiOx52CWMxR0H4GtYl6_yKMm_hHsSq5sfae2EvnyLQSTq4yNPWNgh9CUqoxFqXkRjDV5ZFJp3ZXc_rRDDUngyliu3YcnhY7q6x68ECj1TIX1Qv3SS_sAYSpwby2iON_XRfjbTCzuxK7k25SqR_2iTxRTsvi4aFb_Y61uzHGMoZ86c2lu6BuZzBfDigyJD9HbMrPNRJCWjHwMASADkPe3jRy2LApO4q1eFK7q87CSSPSq99-N3vkwDLYUPY_D5KbivK1AWA5u4sb1Bd5ctJTezfdu93_ypK41uYKA4mbhzOLj3GmNxF2uS791xmPKDIvuDJYC385wMf5SJLSRzjnYM2iaqiXsqP8ILgpSVD9G1YKPnEJ2-IXln2F7LuE7pte43JQr7J41EZIUbZ9zA5jomELcbealeiLStCB-AJnkddP9nXhW=w1440-h944-no)
+- `ovs-ofctl queue-stats`
+- Output
+```bash
+$ ovs-ofctl queue-stats -O OpenFlow13 tcp:192.168.13.14:6633
+OFPST_QUEUE reply (OF1.3) (xid=0x2): 256 queues
+  port 1 queue 0: bytes=0, pkts=0, errors=0, duration=597.4294513152s
+  port 1 queue 1: bytes=0, pkts=0, errors=0, duration=597.4294513152s
+  port 1 queue 2: bytes=0, pkts=0, errors=0, duration=597.4294513152s
+  port 1 queue 3: bytes=0, pkts=0, errors=0, duration=597.4294513152s
+...
+```
 
 #### Show group information
-- `ofdpa-ofctl dump-groups`
+- `ovs-ofctl dump-groups`
 
 #### Show ports information
-- `ofdpa-ofcll dump-ports`
+- `ovs-ofcll dump-ports`
+- Output
+```bash
+$ ovs-ofctl dump-ports -O OpenFlow13 tcp:192.168.13.14:6633
+OFPST_PORT reply (OF1.3) (xid=0x2): 32 ports
+  port  1: rx pkts=0, bytes=0, drop=0, errs=0, frame=0, over=0, crc=0
+           tx pkts=0, bytes=0, drop=0, errs=?, coll=0
+           duration=0s
+  port  2: rx pkts=0, bytes=0, drop=0, errs=0, frame=0, over=0, crc=0
+           tx pkts=0, bytes=0, drop=0, errs=?, coll=0
+           duration=0s
+  port  3: rx pkts=0, bytes=0, drop=0, errs=0, frame=0, over=0, crc=0
+           tx pkts=0, bytes=0, drop=0, errs=?, coll=0
+           duration=0s
+  port  4: rx pkts=0, bytes=0, drop=0, errs=0, frame=0, over=0, crc=0
+           tx pkts=0, bytes=0, drop=0, errs=?, coll=0
+           duration=0s
+...
+```
 
 ## Reference
 - [ovs-ofctl](http://openvswitch.org/support/dist-docs/ovs-ofctl.8.txt)

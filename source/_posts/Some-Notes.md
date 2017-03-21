@@ -8,6 +8,8 @@ tags:
 - notes
 ---
 
+<!--more-->
+
 ## System Design Primer
 
 [donnemartin/system-design-primer][1]
