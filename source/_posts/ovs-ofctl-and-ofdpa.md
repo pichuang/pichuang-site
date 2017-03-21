@@ -20,7 +20,7 @@ Remote control and management OF-DPA via ovs-ofctl
   - IP: 192.168.13.14
   - Hardware
     - Model
-      - [Edgecore AS6712-54X](http://www.edge-core.com/productsInfo.php?cls=1&cls2=7&cls3=43&id=12)
+      - [Edgecore AS6712-32X](http://www.edge-core.com/productsInfo.php?cls=1&cls2=7&cls3=43&id=12)
   - Software
     - ONL version
       - [ONL-2.0.0-ONL-OS-DEB8-2016-12-22.1828-604af0c-AMD64-INSTALLED-INSTALLER](http://opennetlinux.org/binaries/2016.12.22.18.28.604af0c9b3dc9504870c30273ab22f2fb62746c3/ONL-2.0.0-ONL-OS-DEB8-2016-12-22.1828-604af0c-AMD64-INSTALLED-INSTALLER)
@@ -34,7 +34,7 @@ Remote control and management OF-DPA via ovs-ofctl
   - OpenvSwitch
     - 2.7.0
     - In this case, we just use `ovs-ofctl`, and it's also work if you want to use dpctl which CPqD provide
-    - [How to Install OpenvSwitch][]
+    - [How to Install OpenvSwitch][3]
 
 ### Basic Command
 ```bash
