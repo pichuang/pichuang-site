@@ -9,15 +9,6 @@ tags:
 - ovs
 ---
 
-## Update
-* Upgrade: 2017/04/21 Rename `Compile OpenvSwitch`
-* Upgrade: 2014/08/15 [編譯 OpenvSwitch v2.3.0 on Ubutnu 14.04.1 LTS](http://roan.logdown.com/posts/220671-compile-openvswitch-v230-on-ubutnu-14041-lts)
-* Update: 2014/08/15 Upgrade to OpenvSwitch 2.1.3
-* Update: 2014/05/03 [Upgrade to OpenvSwitch 2.1.2](http://openvswitch.org/releases/NEWS-2.1.2)
-* Update: 2014/04/30 [Upgrade to OpenvSwitch 2.1.1](http://openvswitch.org/releases/NEWS-2.1.1)
-* Update: 2014/04/26 Add boot network interface setting
-* Update: 2014/03/31 [Upgrade to OpenvSwitch 2.1.0](http://openvswitch.org/releases/NEWS-2.1.0)
-
 ## Environment
   - OS: Ubuntu 14.04.5 Server LTS X86_64 
   - Kernel version: 4.4.0-59-generic
@@ -126,6 +117,14 @@ $PLYMOUTH message --text="Booting system without full network configuration..." 
 - [OpenvSwitch OverView - hwchiu][2]
 - [設定OpenvSwitch][3]
 
+## Update
+* Update: 2017/04/21 Rename `Compile OpenvSwitch`
+* Update: 2014/08/15 [編譯 OpenvSwitch v2.3.0 on Ubutnu 14.04.1 LTS](http://roan.logdown.com/posts/220671-compile-openvswitch-v230-on-ubutnu-14041-lts)
+* Update: 2014/08/15 Upgrade to OpenvSwitch 2.1.3
+* Update: 2014/05/03 [Upgrade to OpenvSwitch 2.1.2](http://openvswitch.org/releases/NEWS-2.1.2)
+* Update: 2014/04/30 [Upgrade to OpenvSwitch 2.1.1](http://openvswitch.org/releases/NEWS-2.1.1)
+* Update: 2014/04/26 Add boot network interface setting
+* Update: 2014/03/31 [Upgrade to OpenvSwitch 2.1.0](http://openvswitch.org/releases/NEWS-2.1.0)
 
 
 [1]: https://github.com/openvswitch/ovs/blob/master/Documentation/intro/install/general.rst
