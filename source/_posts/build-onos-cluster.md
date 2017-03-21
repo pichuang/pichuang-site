@@ -4,7 +4,7 @@ comments: true
 title: "Build ONOS Cluster"
 description: "Detail of Building ONOS Cluster"
 date: 2016-05-14 00:00:00 +0800
-updated: 2017-01-09 00:00:00 +0800
+updated: 2017-03-21 00:00:00 +0800
 category: sdn
 tags:
 - sdn
@@ -12,13 +12,14 @@ tags:
 ---
 
 #### History
+2017/03/21: Update to 1.9.0 version
 2017/01/09: Update to 1.8.0 version
 
 ## 前言
 雖然之前有寫過 [ONOS on CentOS7](https://blog.pichuang.com.tw/onos-on-centos7)，但因為開發上還是在 MAC OSX 上較為易用，故另開一篇紀錄個人的使用過程
 
 ## 目標
-從 MAC OSX 上針對 ONOS 1.5.0 Falcon 版本做編譯後，部署至 ONOS1, ONOS2 Machine 上組成一個 ONOS Cluster
+從 MAC OSX 上針對 ONOS 1.9.0 Falcon 版本做編譯後，部署至 ONOS1, ONOS2 Machine 上組成一個 ONOS Cluster
 
 ## Enviroment
 - Build Machine
@@ -45,9 +46,9 @@ tags:
 sudo apt-get install software-properties-common -y
 sudo add-apt-repository ppa:webupd8team/java -y
 sudo apt-get update
-sudo apt-get install oracle-java8-installer oracle-java8-set-default -y
+sudo apt-get install oracle-java8-installer oracle-java8-set-default unzip zip -y
 ```
-* For ONOS1 and ONOS2
+* For Build Machine, ONOS1 and ONOS2
 
 
 ### Prepare Installation Enviroment of ONOS
@@ -75,7 +76,7 @@ EOF
 ### Compile ONOS Source Code
 ```bash
 cd ~/ && git clone https://github.com/opennetworkinglab/onos
-cd ~/onos && git checkout onos-1.8
+cd ~/onos && git checkout onos-1.9
 source ~/.bashrc
 tools/build/onos-buck build onos --show-output
 ```
@@ -114,9 +115,9 @@ EOF
 cell pichuang
 ```
 * 請依據自己的需求, 更改裡面的 value,
-* ```ONOS_USER/ONOS_GROUP``` 是指 ONOS1, ONOS2 運行 ONOS 的 Linux User/Group, 並非是 Build Machine 內的
-* ```ONOS_WEB_USER/ONOS_WEB_PASS``` 是指 ONOS1, ONOS2 運行 ONOS 內於 ```~/Applications/apache-karaf-3.0.5/etc/users.properties``` 所設定好的帳號密碼, 只要有關 RESTful API 的存取, 皆是使用這組帳密
-* 每次要 Deploy 的時候, 建議都在跑一次 ```cell $ONOS_CELL``` 確定變數有載入到環境
+* `ONOS_USER/ONOS_GROUP` 是指 ONOS1, ONOS2 運行 ONOS 的 Linux User/Group, 並非是 Build Machine 內的
+* `ONOS_WEB_USER/ONOS_WEB_PASS` 是指 ONOS1, ONOS2 運行 ONOS 內於 `~/Applications/apache-karaf-3.0.5/etc/users.properties` 所設定好的帳號密碼, 只要有關 RESTful API 的存取, 皆是使用這組帳密
+* 每次要 Deploy 的時候, 建議都在跑一次 `cell $ONOS_CELL` 確定變數有載入到環境
 
 ### SSH Login Without Password
 ```bash
@@ -131,11 +132,11 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub sdn@10.211.55.11
 ```bash
 stc setup
 ```
-* 如果對 ```stc setup``` 感到興趣的話, 可以參考 ```$ONOS_ROOT/tools/test/scenarios/setup.xml``` 的內容
-  * 若對 setup.xml 運行的指令有興趣, 可以參考 ```$ONOS_ROOT/tools/test/bin/``` 的 Shell Script
-* ```stc setup``` ```stc startup``` ```stc shutdown``` 這三個指令建議可以都用看看
+* 如果對 `stc setup` 感到興趣的話, 可以參考 `$ONOS_ROOT/tools/test/scenarios/setup.xml` 的內容
+  * 若對 setup.xml 運行的指令有興趣, 可以參考 `$ONOS_ROOT/tools/test/bin/` 的 Shell Script
+* `stc setup` `stc startup` `stc shutdown` 這三個指令建議可以都用看看
 
-<center><img src="https://lh3.googleusercontent.com/UwYDAR59NOASmqhGEEeAKzhlWpl8VkSIHie3WuqUTvNUzbU4EDt9M2bVYh5qePOZfZDxdmVFL9729mNuekyv1kKmFL1h9YESEOCzdn1B9EjnKOLRcgmH404Ce-9MKI3rJNowEmtji6v5dRdrbRVY9Kl5-rDWmuw8Fis6PFhyFwMcfkCjrK6sLWQX3FC2Hc1B1TstqVh2An411GrjmdbVY37YAv5wuAiOYlN5wSeSDPnrnehognv8ta-ohh5pTtVNS7ls5DLyfwo9i4RSMXY3ozFTMHVwEdf475RrAkWf4s0fAYXLfzbP6u1P7frzsToY6ngn8sowxfJdsh6OdXzREve2eDXaqfdetkPBTKZEmal60ADozGCozrSQNsPMXE6mM2Z7mvzPUGlKQGNkdX_53shFOdIKIf4U_5XLS4lnV7FCEQllFrZaShEVbQ9ie6VEk7QZIFi15HGsnArnJUhk-eUKGky_cxT8wtF78lUCUd49OizygRFg7xFHaYT_f7J4mRE02IqdS4ifTm_akf7rSChGDidIaKJtvu17VQp3CaKXlMeFL_CYXfyRNYIib8PjgIMqRzCk_pP8vz-p0JHzOxD1GOFCAsg=w1342-h1025-no" width="50%" height="50%"></center><br>
+{% img https://lh3.googleusercontent.com/UwYDAR59NOASmqhGEEeAKzhlWpl8VkSIHie3WuqUTvNUzbU4EDt9M2bVYh5qePOZfZDxdmVFL9729mNuekyv1kKmFL1h9YESEOCzdn1B9EjnKOLRcgmH404Ce-9MKI3rJNowEmtji6v5dRdrbRVY9Kl5-rDWmuw8Fis6PFhyFwMcfkCjrK6sLWQX3FC2Hc1B1TstqVh2An411GrjmdbVY37YAv5wuAiOYlN5wSeSDPnrnehognv8ta-ohh5pTtVNS7ls5DLyfwo9i4RSMXY3ozFTMHVwEdf475RrAkWf4s0fAYXLfzbP6u1P7frzsToY6ngn8sowxfJdsh6OdXzREve2eDXaqfdetkPBTKZEmal60ADozGCozrSQNsPMXE6mM2Z7mvzPUGlKQGNkdX_53shFOdIKIf4U_5XLS4lnV7FCEQllFrZaShEVbQ9ie6VEk7QZIFi15HGsnArnJUhk-eUKGky_cxT8wtF78lUCUd49OizygRFg7xFHaYT_f7J4mRE02IqdS4ifTm_akf7rSChGDidIaKJtvu17VQp3CaKXlMeFL_CYXfyRNYIib8PjgIMqRzCk_pP8vz-p0JHzOxD1GOFCAsg=w1342-h1025-no %}
 
 ### Login ONOS Cluster CLI
 ```bash
