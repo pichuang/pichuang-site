@@ -18,6 +18,8 @@ tags:
 
 <!--more-->
 
+{% img http://xkr47.outerspace.dyndns.org/netfilter/packet_flow/packet_flow10.png %}
+
 # Concept
 - 4 Tables after kernel version 2.6.x
   - Raw
