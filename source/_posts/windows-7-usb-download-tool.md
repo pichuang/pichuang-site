@@ -4,6 +4,7 @@ title: 'Windows 7 USB Download tool'
 date: 2014-07-12 13:13
 comments: true
 categories: Infra
+tags:
 - infra
 - win7
 ---
