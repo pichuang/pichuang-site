@@ -59,7 +59,7 @@ nameserver 168.95.1.1
 
 ### Port Speed
 - Change Port Speed per Port
-  - vi /etc/ofdpa/accton.conf
+  - vi /etc/accton/ofdpa.conf
 ```bash
 ...
 # port_speed_<port>= Speed
@@ -72,7 +72,7 @@ port_speed_4=10000   # front port 4
 ```
 
 - Change Port Mode per Port
-  - vi /etc/ofdpa/accton.conf
+  - vi /etc/accton/ofdpa.conf
 ```bash
 ...
 # port_mode_<port> = Speed_Type [Interface Type]

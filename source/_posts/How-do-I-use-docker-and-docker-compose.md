@@ -34,8 +34,8 @@ pichuang-dns:
   environment:
     - ROOT_PASSWORD=pichuang
   ports:
-   - 192.168.101.1:10000:10000
-   - 192.168.101.1:53:53/udp
+   - 10000:10000
+   - 53:53/udp
   volumes:
     - /srv/docker/dns:/data
 EOF
