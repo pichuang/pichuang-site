@@ -22,7 +22,7 @@ tags:
     - [ofdpa_3.0 EA4](https://github.com/onfsdn/atrium-docs/raw/1f6cd3fe6d5f79fb2eab54ce6c916c22a3d6a551/16A/ONOS/builds/ofdpa_3.0.4.0%2Baccton1.0~1-1_amd64.deb)
 
 ### Set Base configuration
-1. vi /etc/network/interface
+1. vi /etc/network/interfaces
 ```bash
 auto ma1
 iface ma1 inet static
@@ -111,6 +111,7 @@ port_mode_3=4x10g #Breakout cable
   - `client_drivshell help` 
 - Redirect log to other devices (ex: /dev/console)
   - `client_drivshell log f=/dev/console`
+    - You can use command `tty` to find your teletype device name currently.
 
 ### NOS Information
 - Show Platform Information with ONL
