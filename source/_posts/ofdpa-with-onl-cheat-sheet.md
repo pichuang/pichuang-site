@@ -136,6 +136,20 @@ port_mode_3=4x10g #Breakout cable
 - Show SFP information
   - `onlpdump -S`
 
+### Only launch OF-DPA without OpenFlow
+- Start OF-DPA without OpenFlow agent
+```bash
+KERNEL_MODS=/lib/modules/`uname -r`/ofdpa
+insmod $KERNEL_MODS/linux-kernel-bde.ko dmasize=32M maxpayload=128
+insmod $KERNEL_MODS/linux-user-bde.ko
+```
+
+- Check Status
+```bash
+lsmod
+client_drivshell ps
+```
+
 ## Flow tables ID (OF-DPA 3.0.3)
 
 |Table Name | Table ID|
