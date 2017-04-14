@@ -110,7 +110,7 @@ esac
 exit 0
 EOF
 
-chmox +x /etc/init.d/bind
+chmod +x /etc/init.d/bind
 ```
 
 ### Update rcx.d
