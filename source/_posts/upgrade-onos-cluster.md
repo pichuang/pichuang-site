@@ -3,7 +3,7 @@ layout: post
 title: "Upgrade ONOS Cluster"
 description: "upgrade~"
 date: 2016-05-14 00:00:00 +0800
-updated: 2016-05-14 00:00:00 +0800
+updated: 2017-04-19 00:00:00 +0800
 category: sdn
 tags:
 - sdn
@@ -11,7 +11,7 @@ tags:
 ---
 
 ## 前言
-接續上篇 [Build ONOS Cluster](https://blog.pichuang.com.tw/build-onos-cluster)，部署運行後，總會需要打個 patch 升級一下，故本篇記錄該流程
+接續上篇 [Build ONOS Cluster](http://blog.pichuang.com.tw/build-onos-cluster)，部署運行後，總會需要打個 patch 升級一下，故本篇記錄該流程
 
 ## 目標
 接續上篇文章的環境，升級已經建好的 ONOS Cluster
@@ -40,15 +40,10 @@ tags:
 ```
 cd ~/onos
 git pull # Pull latest source code
-git checkout onos-1.5 # Following 1.5 (Falcon) branch
-mvn install clean # or use command `mci`
+git checkout onos-1.9 # Following 1.9 (Falcon) branch
+onos-buck build onos --show-output
 ```
-
-### Packing ONOS
-```
-onos-package # or use command `op`
-# For now, you can see the tarball in /tmp/onos-*.tar.gz
-```
+- For now, you can see the tarball in /tmp/onos-*.tar.gz
 
 ### Deploy ONOS Package
 ```
