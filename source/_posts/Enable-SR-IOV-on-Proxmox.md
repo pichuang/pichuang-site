@@ -139,7 +139,7 @@ supports-priv-flags: yes
 - [Using SR-IOV on OpenStack][4]
 - [Two aways to set mac address of SR-IOV VF][5]
 - [Linux* Driver for Intel(R) XL710/X710 Virtual Function][6]
-- [KVM 介绍（4）：I/O 设备直接分配和 SR-IOV [KVM PCI/PCIe Pass-Through SR-IOV][7]
+- [KVM 介绍（4）：I/O 设备直接分配和 SR-IOV][7]
 [1]: https://software.intel.com/en-us/articles/single-root-inputoutput-virtualization-sr-iov-with-linux-containers
 [2]: http://www.intel.com/content/dam/www/public/us/en/documents/technology-briefs/xl710-sr-iov-config-guide-gbe-linux-brief.pdf
 [3]: http://files.meetup.com/19623913/SR-IOV%20HandsOn_v1.0.pptx
