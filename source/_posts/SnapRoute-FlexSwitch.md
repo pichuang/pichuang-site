@@ -24,12 +24,14 @@ tags:
 
 ## Support Platform
 
-依據 [Source code - reltools/pkgInfo.json][5]，目前支援以下平台:
+依據 [Source code - reltools/pkgInfo.json][5]，目前 OpenSource 支援以下平台:
 - [Accton/Edgecore AS5712-54X][6]
 - [Accton/Edgecore Wedge40][7]
 - [Accton/Edgecore Wedge100][8]
 - Celestica Redstone
 - Docker
+
+商業版本請參考 [FlexSwitch - Hardware Compatibility List][21]
 
 <!--more-->
 
@@ -110,3 +112,4 @@ More: [FlexSwitch API][19]
 [18]: https://opennetlinux.org/
 [19]: https://drive.google.com/open?id=0B19ucAmtemIQYkZhX2FUYi13QTA
 [20]: http://packetpushers.net/virtual-toolbox/list-network-operating-systems/
+[21]: http://docs.snaproute.com/hcl/index.html

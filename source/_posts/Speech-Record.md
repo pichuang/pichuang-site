@@ -10,16 +10,18 @@ tags:
 ---
 
 
-## 2017 (Total: 11)
-- How to build IaaS (Proxmox CE) with VNFs (OPNsense, DNS),  HsinChu, Taiwan, National Chiao Tung University, NA/SA Course, May 18, 2017
+## 2017 (Total: 13)
+- Introduction of ON.Lab CORD, Taipei, Taiwan, [OpenStack Day Taiwan 2017][38], July 18, 2017
+- [Build Testing Infrastructure][37],  HsinChu, Taiwan, National Chiao Tung University, NA/SA Course, May 18, 2017
 - Open Networking Experience Sharing, HsinChu, Taiwan, [SDNDS-TW Workshop 2017][21], May 12, 2017
-- Introduction to SnapRoute/BigSwitch/CumulusLinux/Pica8, HsinChu, Taiwan, [SDNDS-TW Workshop 2017][21], May 12, 2017
-- Introduction to Open vSwitch/ONL&OF-DPA/Mininet, HsinChu, Taiwan, [SDNDS-TW Workshop 2017][21], May 11, 2017
-- NetDevOps - Automation and Configuration Management using Ansible, HsinChu, Taiwan, [SDNDS-TW Workshop 2017][21], May 11, 2017
+- [Introduction to SnapRoute/BigSwitch/CumulusLinux/Pica8][35], HsinChu, Taiwan, [SDNDS-TW Workshop 2017][21], May 12, 2017
+- [Introduction to Open vSwitch/ONL&OF-DPA/Mininet][34], HsinChu, Taiwan, [SDNDS-TW Workshop 2017][21], May 11, 2017
+- [NetDevOps - Automation and Configuration Management using Ansible][36], HsinChu, Taiwan, [SDNDS-TW Workshop 2017][21], May 11, 2017
 - Overview of Open Networking (OpenSource), Taichung, Taiwan, [Tunghai University, CS Seminar][18], May 3, 2017
-- [Overview of Open Networking (Enginnering and Business)][31], Tainan, Taiwan, [Study-Area Meetup][20], Apr. 29, 2017
-- [Overview of Open Networking (Enginnering and Business)][31], Taipei, Taiwan, [Study-Area Meetup][19], Apr. 22, 2017
-- Why you need to know NetDevOps, HsinChu, Taiwan, [Agile Meetup][17], March. 19, 2017
+- [Overview of Open Networking (Engineering and Business)][31], Tainan, Taiwan, [Study-Area Meetup][20], Apr. 29, 2017
+- [Overview of Open Networking (Engineering and Business)][31], Taipei, Taiwan, [Study-Area Meetup][19], Apr. 22, 2017
+- [Introduction of Open Networking][11], HsinChu, Taiwan, [National Chiao Tung University, Mentor's Hours][33], March 22, 2017
+- Why you need to know NetDevOps, HsinChu, Taiwan, [Agile Meetup][17], March 19, 2017
 - [Network Troubleshooting Methodology][9], HsinChu, Taiwan, National Chiao Tung University, NA/SA Course, March. 16, 2017
 - [Next-generation Data Center Solution Big Switch Monitoring Fabric][10], Taipei, Taiwan, [ISAC][30], Jan. 20, 2017
 
@@ -77,3 +79,9 @@ tags:
 [30]: http://www.isac.org.tw/news_detail.php?id=40
 [31]: https://speakerdeck.com/pichuang/open-networking-engineering-and-business
 [32]: https://nasa.cs.nctu.edu.tw/sap/2016/
+[33]: https://course.nctu.edu.tw/Course/CrsOutline/show.asp?Acy=105&Sem=2&CrsNo=1168&lang=en-us
+[34]: https://speakerdeck.com/pichuang/introduction-to-open-vswitch-onl-and-of-dpa-and-mininet
+[35]: https://speakerdeck.com/pichuang/introduction-to-snaproute-bigswitch-cumulus-linux-and-pica8
+[36]: https://speakerdeck.com/pichuang/netdevops-automation-and-configuration-management-using-ansible
+[37]: https://speakerdeck.com/pichuang/build-testing-infrastructure
+[38]: http://openstack.ithome.com.tw/speaker.html

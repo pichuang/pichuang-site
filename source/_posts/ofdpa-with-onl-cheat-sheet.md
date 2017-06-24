@@ -48,11 +48,15 @@ nameserver 168.95.1.1
 - Show Rate Limit per queue 
   - `client_queue_config <queueId> <intIfNum>` 
   - ex: `client_queue_config 1 1` 
-    - 顯示 Queue 1, Port 1 最小/最大速率 
+    - Show Queue 1, Port 1 min/Max rate 
 
 ### OF Agent App
 - Enable ofagentapp service
-  - `launcher ofagentapp --controller=<CONTROLLER_IP>:6653 --listen=<SWITCH_MA1_IP>:6633`
+  - via CLI 
+    - `launcher ofagentapp --controller=<CONTROLLER_IP>:6653 --listen=<SWITCH_MA1_IP>:6653`
+  - via INIT
+    - `service ofagentd restart`
+    - The ofagent.conf at `/etc/ofagent/ofagent.conf`
   - More detailes [How to enable debugging mode on OF-DPA][2]
 - Stop ofagentapp
   - `pkill ofagentapp`
@@ -100,6 +104,12 @@ port_mode_3=4x10g #Breakout cable
   - `client_oam_dump`
 - Dump Class Color Table
   - `client_classcolortable_dump` 
+- Show physical port mapping
+  - `client_drivport -a`
+- Enable sFlow
+  - `client_sflow`
+- Purge all configuration
+  - `client_cfg_purge`
 
 ### BRCM Diag Shell with ONL
 - NOTE: Please launch `ofagentapp` first in backaground
@@ -111,7 +121,8 @@ port_mode_3=4x10g #Breakout cable
   - `client_drivshell help` 
 - Redirect log to other devices (ex: /dev/console)
   - `client_drivshell log f=/dev/console`
-    - You can use command `tty` to find your teletype device name currently.
+    - You can use command `tty` to find your teletype device name currently
+    - Tips: `client_drivshell log f=$(tty)`
 
 ### NOS Information
 - Show Platform Information with ONL
