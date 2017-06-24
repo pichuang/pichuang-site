@@ -28,7 +28,7 @@ Remote control and management OF-DPA via ovs-ofctl
       - [ofdpa_3.0 EA4](https://github.com/onfsdn/atrium-docs/blob/master/16A/ONOS/builds/ofdpa_3.0.4.0%2Baccton1.0~1-1_amd64.deb)
     - `You need launch ofappagent first`. If you dont know how to start it. Please refer [OF-DPA with ONL Cheat Sheet](http://blog.pichuang.com.tw/ofdpa-with-onl-cheat-sheet)
     - Command
-      - `launcher ofagentapp -a2 -d4 -c1 -c2 -c3 -c4 -c5 -l 0.0.0.0:6633`
+      - `launcher ofagentapp -a2 -d4 -c1 -c2 -c3 -c4 -c5 -l 0.0.0.0:6653`
 - Contorl VM
   - IP: 192.168.13.2
   - OpenvSwitch
@@ -38,16 +38,16 @@ Remote control and management OF-DPA via ovs-ofctl
 
 ### Basic Command
 ```bash
-ovs-ofctl show -O OpenFlow13 tcp:192.168.13.14:6633
+ovs-ofctl show -O OpenFlow13 tcp:192.168.13.14:6653
 ```
 
 ### Usage
 
 #### Show port information
-- `ovs-ofctl show -O OpenFlow13 tcp:192.168.13.14:6633`
+- `ovs-ofctl show -O OpenFlow13 tcp:192.168.13.14:6653`
 - Output
 ```bash
-$ ovs-ofctl show -O OpenFlow13 tcp:192.168.13.14:6633
+$ ovs-ofctl show -O OpenFlow13 tcp:192.168.13.14:6653
 OFPT_FEATURES_REPLY (OF1.3) (xid=0x2): dpid:000000000000da7a
 n_tables:23, n_buffers:0
 capabilities: FLOW_STATS TABLE_STATS PORT_STATS QUEUE_STATS
@@ -71,7 +71,7 @@ OFPST_PORT_DESC reply (OF1.3) (xid=0x3):
 - `ovs-ofctl dump-tables`
 - Output
 ```bash
-$ ovs-ofctl dump-tables -O OpenFlow13 tcp:192.168.13.14:6633
+$ ovs-ofctl dump-tables -O OpenFlow13 tcp:192.168.13.14:6653
 OFPST_TABLE reply (OF1.3) (xid=0x2):
   table 0:
     active=0, lookup=0, matched=0
@@ -101,13 +101,13 @@ OFPST_TABLE reply (OF1.3) (xid=0x2):
 ```
 
 #### Add flow entry
-- `ovs-ofctl add-flow -O OpenFlow13 tcp:192.168.13.14:6633 table=60,priority=40000,eth_type=0x0800,ip_dst=55.55.55.55,actions=controller`
+- `ovs-ofctl add-flow -O OpenFlow13 tcp:192.168.13.14:6653 table=60,priority=40000,eth_type=0x0800,ip_dst=55.55.55.55,actions=controller`
 
 #### Show flow entries
 - `ovs-ofctl dump-flows`
 - Output
 ```bash
-$ ovs-ofctl dump-flows -O OpenFlow13 tcp:192.168.13.14:6633
+$ ovs-ofctl dump-flows -O OpenFlow13 tcp:192.168.13.14:6653
 OFPST_FLOW reply (OF1.3) (xid=0x2):
  cookie=0x0, duration=46.570s, table=60, n_packets=0, n_bytes=0, priority=40000,ip,nw_dst=55.55.55.55 actions=CONTROLLER:65535
 ```
@@ -116,7 +116,7 @@ OFPST_FLOW reply (OF1.3) (xid=0x2):
 - `ovs-ofctl queue-stats`
 - Output
 ```bash
-$ ovs-ofctl queue-stats -O OpenFlow13 tcp:192.168.13.14:6633
+$ ovs-ofctl queue-stats -O OpenFlow13 tcp:192.168.13.14:6653
 OFPST_QUEUE reply (OF1.3) (xid=0x2): 256 queues
   port 1 queue 0: bytes=0, pkts=0, errors=0, duration=597.4294513152s
   port 1 queue 1: bytes=0, pkts=0, errors=0, duration=597.4294513152s
@@ -132,7 +132,7 @@ OFPST_QUEUE reply (OF1.3) (xid=0x2): 256 queues
 - `ovs-ofcll dump-ports`
 - Output
 ```bash
-$ ovs-ofctl dump-ports -O OpenFlow13 tcp:192.168.13.14:6633
+$ ovs-ofctl dump-ports -O OpenFlow13 tcp:192.168.13.14:6653
 OFPST_PORT reply (OF1.3) (xid=0x2): 32 ports
   port  1: rx pkts=0, bytes=0, drop=0, errs=0, frame=0, over=0, crc=0
            tx pkts=0, bytes=0, drop=0, errs=?, coll=0
