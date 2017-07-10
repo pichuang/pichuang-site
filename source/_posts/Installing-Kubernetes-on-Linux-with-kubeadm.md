@@ -26,8 +26,8 @@ tags:
     - Ubuntu 16.04 
     - 192.168.100.54
 - Software
-    - Kuburnetes: v1.6.4
-    - Calico: v2.2
+    - Kuburnetes: v1.7.0
+    - Calico: v2.3
 
 <!--more-->
 
@@ -68,9 +68,10 @@ sudo kubeadm init --pod-network-cidr 192.168.0.0/16 --service-cidr 10.96.0.0/12 
 
 ### Loading k8s config
 ```bash
-sudo cp /etc/kubernetes/admin.conf $HOME/
-sudo chown $(id -u):$(id -g) $HOME/admin.conf
-export KUBECONFIG=$HOME/admin.conf
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
+export KUBECONFIG=$HOME/.kube/config
 ```
 - Make a record of the kubeadm join command that kubeadm init outputs
     - `kubeadm join --token 5b706a.5c9c84f7de52d5dc 192.168.100.52:6443`
@@ -83,7 +84,7 @@ sudo kubeadm join --token d7a85b.84a4669feb85b510 192.168.100.52:6443
 
 ### Kubeadm hosted install Calico
 ```bash
-kubectl apply -f http://docs.projectcalico.org/v2.2/getting-started/kubernetes/installation/hosted/kubeadm/1.6/calico.yaml
+kubectl apply -f http://docs.projectcalico.org/v2.3/getting-started/kubernetes/installation/hosted/kubeadm/1.6/calico.yaml
 ```
 - Make sure you install the add-on. If not, you will get status 'NotReady'.
 
@@ -91,9 +92,9 @@ kubectl apply -f http://docs.projectcalico.org/v2.2/getting-started/kubernetes/i
 ```bash
 $ kubectl get nodes
 NAME          STATUS    AGE       VERSION
-k8s-1.on.ec   Ready     1h        v1.6.4
-k8s-2.on.ec   Ready     1h        v1.6.4
-k8s-3.on.ec   Ready     1h        v1.6.4
+k8s-1.on.ec   Ready     1h        v1.7.0
+k8s-2.on.ec   Ready     1h        v1.7.0
+k8s-3.on.ec   Ready     1h        v1.7.0
 ```
 
 ## Tear down

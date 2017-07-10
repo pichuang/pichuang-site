@@ -10,7 +10,8 @@ tags:
 ---
 
 
-## 2017 (Total: 13)
+## 2017 (Total: 14)
+- NetDevOps: How to Become Next-Generation Network Engineer, Taipei, Taiwan, [DevOps Days Taipei 2017][39], Sept 4-6, 2017
 - Introduction of ON.Lab CORD, Taipei, Taiwan, [OpenStack Day Taiwan 2017][38], July 18, 2017
 - [Build Testing Infrastructure][37],  HsinChu, Taiwan, National Chiao Tung University, NA/SA Course, May 18, 2017
 - Open Networking Experience Sharing, HsinChu, Taiwan, [SDNDS-TW Workshop 2017][21], May 12, 2017
@@ -85,3 +86,4 @@ tags:
 [36]: https://speakerdeck.com/pichuang/netdevops-automation-and-configuration-management-using-ansible
 [37]: https://speakerdeck.com/pichuang/build-testing-infrastructure
 [38]: http://openstack.ithome.com.tw/speaker.html
+[39]: https://www.devopsdays.org/events/2017-taipei/
