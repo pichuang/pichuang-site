@@ -10,7 +10,6 @@ tags:
 - pfc
 ---
 
-<!--more-->
 ## Goals
 - Follow [HowTo Run RoCE and TCP over L2 Enabled with PFC (2016)][7]
 - 2 Hosts use 1 network (VLAN 100) for all traffic
@@ -20,6 +19,7 @@ tags:
   - TCP Flow (pass via the kernel)
     - TCP will be sent over priority 0
 
+<!--more-->
 
 ## Environment
 - mlx-1.on.ec
@@ -34,6 +34,7 @@ tags:
   - VLAN 100 IP: 172.16.100.2/24
 - Switch
   - BigSwitch BCF / Cumulus Linux / PicOS
+
 
 ## Install OFED Driver
 ```bash

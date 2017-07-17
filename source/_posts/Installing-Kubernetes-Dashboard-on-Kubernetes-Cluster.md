@@ -34,9 +34,10 @@ kubectl create -f https://git.io/kube-dashboard
 
 ### Proxy
 ```bash
-kubectl proxy --address 0.0.0.0 --accept-hosts '.*'
+kubectl proxy --address='0.0.0.0' --port=8001 --accept-hosts='^*$'
 ```
 - [StackOverflow - kubectl proxy unauthorized when accessing from another machine][3]
+- [Solution][4]
 
 ## Reference
 - [Installing Kubernetes on Linux with kubeadm][1]
@@ -45,3 +46,4 @@ kubectl proxy --address 0.0.0.0 --accept-hosts '.*'
 [1]: http://blog.pichuang.com.tw/Installing-Kubernetes-on-Linux-with-kubeadm/#more
 [2]: https://github.com/kubernetes/dashboard
 [3]: https://stackoverflow.com/questions/42095142/kubectl-proxy-unauthorized-when-accessing-from-another-machine
+[4]: https://github.com/kubernetes/dashboard/issues/692#issuecomment-264619451
