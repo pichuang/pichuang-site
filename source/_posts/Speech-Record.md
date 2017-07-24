@@ -87,6 +87,6 @@ tags:
 [36]: https://speakerdeck.com/pichuang/netdevops-automation-and-configuration-management-using-ansible
 [37]: https://speakerdeck.com/pichuang/build-testing-infrastructure
 [38]: http://openstack.ithome.com.tw/speaker.html
-[39]: https://www.devopsdays.org/events/2017-taipei/
+[39]: https://devopsdays.tw/
 [40]: http://www.conference.cn/sdnfv/2017/En/
 [41]: https://speakerdeck.com/pichuang/introduction-of-onf-cord
