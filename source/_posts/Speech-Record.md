@@ -10,9 +10,10 @@ tags:
 ---
 
 
-## 2017 (Total: 14)
+## 2017 (Total: 15)
 - NetDevOps: How to Become Next-Generation Network Engineer, Taipei, Taiwan, [DevOps Days Taipei 2017][39], Sept 4-6, 2017
-- Introduction of ON.Lab CORD, Taipei, Taiwan, [OpenStack Day Taiwan 2017][38], July 18, 2017
+- Introduction of ONF CORD, Beijing, China, [Global SDNFV Tech Conference 2017][40], August 2, 2017
+- [Introduction of ONF CORD][41], Taipei, Taiwan, [OpenStack Day Taiwan 2017][38], July 18, 2017
 - [Build Testing Infrastructure][37],  HsinChu, Taiwan, National Chiao Tung University, NA/SA Course, May 18, 2017
 - Open Networking Experience Sharing, HsinChu, Taiwan, [SDNDS-TW Workshop 2017][21], May 12, 2017
 - [Introduction to SnapRoute/BigSwitch/CumulusLinux/Pica8][35], HsinChu, Taiwan, [SDNDS-TW Workshop 2017][21], May 12, 2017
@@ -87,3 +88,5 @@ tags:
 [37]: https://speakerdeck.com/pichuang/build-testing-infrastructure
 [38]: http://openstack.ithome.com.tw/speaker.html
 [39]: https://www.devopsdays.org/events/2017-taipei/
+[40]: http://www.conference.cn/sdnfv/2017/En/
+[41]: https://speakerdeck.com/pichuang/introduction-of-onf-cord
