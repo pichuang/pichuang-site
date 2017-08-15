@@ -13,7 +13,7 @@ tags:
 - centos
 ---
 
-## Remove `quiet`, append `text console=tty0 console=ttyS0,115200n8` in kernel parameter
+### Remove `quiet`, append `text console=tty0 console=ttyS0,115200n8` in kernel parameter
 
 - vim isolinux/isolinux.cfg
 ```bash
