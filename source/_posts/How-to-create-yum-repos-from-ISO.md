@@ -17,6 +17,8 @@ tags:
 ## Version information
 - RHEL 7.3
 
+<!--more-->
+
 ## Copy pakages to local
 ### In rhel-mirror
 ```
