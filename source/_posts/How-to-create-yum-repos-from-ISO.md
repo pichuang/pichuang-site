@@ -40,6 +40,10 @@ cd /repos/centos/7/3 && createrepo .
 ln -s /repos/centos /var/www/html/centos
 firewall-cmd --zone=public --add-service=http
 
+# For SELinux Enable
+chcon -R -t httpd_sys_content_t /reops/centos
+chcon -R -t httpd_sys_content_t /var/www/html/centos
+
 # Clean
 umount /media/rhel73
 rm -rf /media/rhel73
