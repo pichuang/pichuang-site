@@ -11,8 +11,8 @@ tags:
 
 
 ## 2017 (Total: 18)
-- Overview of Software Defined Network, Taichung, Taiwan, TFC, Sept 23, 2017
-- NetDevOps: How to Become Next-Generation Network Engineer, Taipei, Taiwan, [DevOps Days Taipei 2017][39], Sept 4-6, 2017
+- [The Trends of Open Networking ][47], Taichung, Taiwan, TFC, Sept 23, 2017
+- [NetDevOps: How to Become Next-Generation Network Engineer][46], Taipei, Taiwan, [DevOps Days Taipei 2017][39], Sept 4-6, 2017
 - [What happened in Data Center Networking][45], HsinChu, Taiwan, [DigitalOcean Hsinchu][43], August 25, 2017
 - [The Future of Open Networking and OpenStack][44], Taichung, Taiwan, National Taichung University of Science and Technology, August 15, 2017
 - [Introduction of ONF CORD][42], Beijing, China, [Global SDNFV Tech Conference 2017][40], August 2, 2017
@@ -97,3 +97,5 @@ tags:
 [43]: https://www.facebook.com/DigitalOceanHsinchu/photos/a.756940437798911.1073741828.732176540275301/820991324727155/?type=3&permPage=1
 [44]: https://speakerdeck.com/pichuang/the-future-of-open-networking-and-openstack
 [45]: https://speakerdeck.com/pichuang/what-happened-in-data-center-networking
+[46]: https://speakerdeck.com/pichuang/netdevops-next-generation-network-engineer
+[47]: https://speakerdeck.com/pichuang/the-trends-of-open-networking
