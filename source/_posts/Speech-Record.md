@@ -10,9 +10,10 @@ tags:
 ---
 
 
-## 2017 (Total: 23)
+## 2017 (Total: 24)
 - Introduction of Open Source Networking, Chiayi, Taiwan, National Chiayi University, Nov. 22, 2017
 - Introduction of Open Source Networking, Tainan, Taiwan, National Cheng Kung University, Nov. 16, 2017
+- 北米ホワイトボックス活用事例最新動向, 東京, 日本, [ホワイトボックススイッチユーザ会 第四回勉強会][49], Oct. 26, 2017
 - [Overview of DevOps][7], HsinChu, Taiwan, National Chiao Tung University, NA/SA Course, Oct. 19, 2017
 - The Mission of Open Networking Foundation, Taichung, Taiwan, [Tunghai University, CS Seminar][48], Oct. 16, 2017
 - Introduction of Open Networking, Keelung, Taiwan, National Taiwan Ocean University, Seminar, Oct. 12, 2017
@@ -105,3 +106,4 @@ tags:
 [46]: https://speakerdeck.com/pichuang/netdevops-next-generation-network-engineer
 [47]: https://speakerdeck.com/pichuang/the-trends-of-open-networking
 [48]: http://www.cs.thu.edu.tw/web/lecture/detail.php?cid=1&id=162
+[49]: https://atnd.org/events/90932

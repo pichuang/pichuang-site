@@ -12,6 +12,7 @@ tags:
 ---
 
 #### History
+2017/10/24: Update to 1.11.0 version
 2017/03/21: Update to 1.9.0 version
 2017/01/09: Update to 1.8.0 version
 
@@ -19,39 +20,50 @@ tags:
 雖然之前有寫過 [ONOS on CentOS7](https://blog.pichuang.com.tw/onos-on-centos7)，但因為開發上還是在 MAC OSX 上較為易用，故另開一篇紀錄個人的使用過程
 
 ## 目標
-從 MAC OSX 上針對 ONOS 1.9.0 Falcon 版本做編譯後，部署至 ONOS1, ONOS2 Machine 上組成一個 ONOS Cluster
+從 MAC OSX 上針對 ONOS 1.11.0 Loon 版本做編譯後，部署至 ONOS1, ONOS2 Machine 上組成一個 ONOS Cluster
 
 ## Enviroment
-- Build Machine
+- Build-ONOS
   - MAC OSX 10.12.1
   - Java 1.8.0
   - Apache Karaf 3.0.5
   - Apache Maven 3.3.9
   - Misc
-    - IP: 10.211.55.2
+    - IP: 192.168.100.42
     - Cell name: pichuang
-- ONOS1 Machine
+- ONOS-1 Machine
   - Ubuntu 14.04
   - Java 1.8.0
   - User/Group: sdn/sdn
-  - IP: 10.211.55.10
-- ONOS2 Machine
+  - IP: 192.168.100.45
+- ONOS-2 Machine
   - Ubuntu 14.04
   - Java 1.8.0
   - User/Group: sdn/sdn
-  - IP: 10.211.55.11
+  - IP: 192.168.100.46
+- ONOS-3
+  - Ubuntu 14.04
+  - Java 1.8.0
+  - User/Group: sdn/sdn
+  - IP: 192.168.100.47
 
-### Install Oracle Java 8 on Build Machine, ONOS1 and ONOS2
+### Install Oracle Java 8 on Build Machine, ONOS-1, ONOS-2 and ONOS-3
 ```bash
 sudo apt-get install software-properties-common -y
 sudo add-apt-repository ppa:webupd8team/java -y
 sudo apt-get update
-sudo apt-get install oracle-java8-installer oracle-java8-set-default unzip zip -y
+echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 select true" | sudo debconf-set-selections
+sudo apt-get install oracle-java8-installer oracle-java8-set-default unzip zip curl -y
 ```
-* For Build Machine, ONOS1 and ONOS2
+* For Build Machine, ONOS-1, ONOS-2 and ONOS-3
 
+### Add user and switch to `sdn` user
+```
+sudo adduser sdn --system --group 
+```
+- Make sure you append NOPASSWD in sudo files, e.g. `%sudo	ALL=(ALL) NOPASSWD:ALL`
 
-### Prepare Installation Enviroment of ONOS
+### Prepare Installation Enviroment of Build-ONOS
 ```bash
 cd ~/ && mkdir Downloads Applications
 cd Downloads
@@ -65,43 +77,46 @@ tar -zxvf apache-maven-3.3.9-bin.tar.gz -C ../Applications/
 ```bash
 cat >> ~/.bashrc << EOF
 export ONOS_ROOT=~/onos
-source $ONOS_ROOT/tools/dev/bash_profile
+source ~/onos/tools/dev/bash_profile
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 export ONOS_CELL=pichuang # Change your cell name
 cell $ONOS_CELL
 EOF
 ```
-- In build machine
+- In build-onos machine
 
 ### Compile ONOS Source Code
 ```bash
 cd ~/ && git clone https://github.com/opennetworkinglab/onos
-cd ~/onos && git checkout onos-1.9
+cd ~/onos && git checkout onos-1.11
 source ~/.bashrc
 tools/build/onos-buck build onos --show-output
 ```
 - You will get the ONOS package in `buck-out/gen/tools/package/onos-package/onos.tar.gz`
-- Run the ONOS service with debug mode. `tools/build/onos-buck run onos-local -- clean debug`
+- Run the ONOS s
+ervice with debug mode. `tools/build/onos-buck run onos-local -- clean debug`
 - Attach to ONOS CLI `tools/test/bin/onos localhost`
 
 ### Create a cell definition
 ```bash
-cat >> ~/onos/tools/test/cells/pichuang << EOF
+cat > ~/onos/tools/test/cells/pichuang << EOF
 # Cell name
 export ONOS_CELL=pichuang
 
 # IP addresses of the VMs hosting ONOS instances. More OC instances may be set, if necessary.
-export OC1="10.211.55.10"
-export OC2="10.211.55.11"
+export OC1="192.168.100.45"
+export OC2="192.168.100.46"
+export OC3="192.168.100.47"
 
 # The default target node IP. This is an alias for OC1.
-export OCI="10.211.55.10"
+export OCI="192.168.100.45"
 
 # The ONOS apps to load at startup
-export ONOS_APPS="drivers,openflow,fwd,proxyarp"
+# For trellis
+export ONOS_APPS="drivers,openflow,segmentrouting,fpm,dhcprelay,netcfghostprovider"
 
 # Pattern to specify which address to use for inter-ONOS node communication (not used with single-instance core)
-export ONOS_NIC="10.211.55.*"
+export ONOS_NIC="192.168.100.*"
 
 # User
 export ONOS_USER=sdn # Change your username
@@ -115,21 +130,28 @@ EOF
 cell pichuang
 ```
 * 請依據自己的需求, 更改裡面的 value,
-* `ONOS_USER/ONOS_GROUP` 是指 ONOS1, ONOS2 運行 ONOS 的 Linux User/Group, 並非是 Build Machine 內的
-* `ONOS_WEB_USER/ONOS_WEB_PASS` 是指 ONOS1, ONOS2 運行 ONOS 內於 `~/Applications/apache-karaf-3.0.5/etc/users.properties` 所設定好的帳號密碼, 只要有關 RESTful API 的存取, 皆是使用這組帳密
+* `ONOS_USER/ONOS_GROUP` 是指 ONOS-{1,2,3} 運行 ONOS 的 Linux User/Group, 並非是 Build Machine 內的
+* `ONOS_WEB_USER/ONOS_WEB_PASS` 是指 ONOS-{1,2,3} 運行 ONOS 內於 `~/Applications/apache-karaf-3.0.5/etc/users.properties` 所設定好的帳號密碼, 只要有關 RESTful API 的存取, 皆是使用這組帳密
 * 每次要 Deploy 的時候, 建議都在跑一次 `cell $ONOS_CELL` 確定變數有載入到環境
 
 ### SSH Login Without Password
 ```bash
-# Login via SSH from build machine to ONOS1 machine
-ssh-copy-id -i ~/.ssh/id_rsa.pub sdn@10.211.55.10
+# Generate SSH Key on Build-ONOS
+ssh-keygen
 
-# Login via SSH from build machine to ONOS2 machine
-ssh-copy-id -i ~/.ssh/id_rsa.pub sdn@10.211.55.11
+# Login via SSH from build machine to ONOS-1 machine
+ssh-copy-id -i ~/.ssh/id_rsa.pub sdn@192.168.100.45
+
+# Login via SSH from build machine to ONOS-2 machine
+ssh-copy-id -i ~/.ssh/id_rsa.pub sdn@192.168.100.46
+
+# Login via SSH from build machine to ONOS-3 machine
+ssh-copy-id -i ~/.ssh/id_rsa.pub sdn@192.168.100.47
 ```
 
 ### Deploy ONOS Package
 ```bash
+stc prerequisites
 stc setup
 ```
 * 如果對 `stc setup` 感到興趣的話, 可以參考 `$ONOS_ROOT/tools/test/scenarios/setup.xml` 的內容
@@ -140,19 +162,19 @@ stc setup
 
 ### Login ONOS Cluster CLI
 ```bash
-onos 10.211.55.10 # or use command `onos $OCI`
+onos 192.168.100.45 # or use command `onos $OCI`
 ```
 
 ### Open WEB GUI
 ```bash
-http://10.211.55.10:8181/onos/ui/index.html
+http://192.168.100.45:8181/onos/ui/index.html
 ```
 * ONOS WEB User: onos
 * ONOS WEB Password: rocks
 
 ### ONOS API
 ```bash
-http://10.211.55.10:8181/onos/v1/docs/
+http://192.168.100.45:8181/onos/v1/docs/
 ```
 
 ## Reference
