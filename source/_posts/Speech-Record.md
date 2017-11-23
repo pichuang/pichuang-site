@@ -11,11 +11,11 @@ tags:
 
 
 ## 2017 (Total: 24)
-- Introduction of Open Source Networking, Chiayi, Taiwan, National Chiayi University, Nov. 22, 2017
-- Introduction of Open Source Networking, Tainan, Taiwan, National Cheng Kung University, Nov. 16, 2017
-- 北米ホワイトボックス活用事例最新動向, 東京, 日本, [ホワイトボックススイッチユーザ会 第四回勉強会][49], Oct. 26, 2017
+- Introduction of Open Source Networking, Tainan, Taiwan, [通訊開源軟體產學技術研討會][51], National Cheng Kung University, Nov. 16, 2017
+- [Trellis Bare Metal Switches From Edgecore][54], San Jose, USA, [CORD Build 2017][50], Nov. 9, 2017
+- [北米ホワイトボックス活用事例最新動向][53], 東京, 日本, [ホワイトボックススイッチユーザ会 第四回勉強会][49], Oct. 26, 2017
 - [Overview of DevOps][7], HsinChu, Taiwan, National Chiao Tung University, NA/SA Course, Oct. 19, 2017
-- The Mission of Open Networking Foundation, Taichung, Taiwan, [Tunghai University, CS Seminar][48], Oct. 16, 2017
+- [The Mission of Open Networking Foundation][52], Taichung, Taiwan, [Tunghai University, CS Seminar][48], Oct. 16, 2017
 - Introduction of Open Networking, Keelung, Taiwan, National Taiwan Ocean University, Seminar, Oct. 12, 2017
 - [The Trends of Open Networking ][47], Taichung, Taiwan, TFC, Sept 23, 2017
 - [NetDevOps: How to Become Next-Generation Network Engineer][46], Taipei, Taiwan, [DevOps Days Taipei 2017][39], Sept 4-6, 2017
@@ -107,3 +107,8 @@ tags:
 [47]: https://speakerdeck.com/pichuang/the-trends-of-open-networking
 [48]: http://www.cs.thu.edu.tw/web/lecture/detail.php?cid=1&id=162
 [49]: https://atnd.org/events/90932
+[50]: https://cordbuild2017.sched.com/speaker/zaosuqiu
+[51]: http://5gopensourceplatform.logdown.com/posts/3177106
+[52]: https://speakerdeck.com/pichuang/the-mission-of-open-networking
+[53]: https://speakerdeck.com/pichuang/bei-mi-howaitohotukusuhuo-yong-shi-li-zui-xin-dong-xiang
+[54]: https://speakerdeck.com/pichuang/trellis-bare-metal-switches-from-edgecore

@@ -4,7 +4,7 @@ comments: true
 title: "Build ONOS Cluster"
 description: "Detail of Building ONOS Cluster"
 date: 2016-05-14 00:00:00 +0800
-updated: 2017-03-21 00:00:00 +0800
+updated: 2017-11-05 00:00:00 +0800
 category: sdn
 tags:
 - sdn
@@ -12,7 +12,7 @@ tags:
 ---
 
 #### History
-2017/10/24: Update to 1.11.0 version
+2017/11/05: Update to 1.11 branch
 2017/03/21: Update to 1.9.0 version
 2017/01/09: Update to 1.8.0 version
 
@@ -56,12 +56,13 @@ echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 select true" | 
 sudo apt-get install oracle-java8-installer oracle-java8-set-default unzip zip curl -y
 ```
 * For Build Machine, ONOS-1, ONOS-2 and ONOS-3
+* If you are using Ubuntu 16.04, please make sure all of machine have python2. The install command is "sudo apt intall -y python"
 
 ### Add user and switch to `sdn` user
 ```
 sudo adduser sdn --system --group 
 ```
-- Make sure you append NOPASSWD in sudo files, e.g. `%sudo	ALL=(ALL) NOPASSWD:ALL`
+- Make sure you append NOPASSWD in sudo files, e.g. `%sudo	ALL=(ALL) NOPASSWD:ALL` in
 
 ### Prepare Installation Enviroment of Build-ONOS
 ```bash
@@ -78,7 +79,6 @@ tar -zxvf apache-maven-3.3.9-bin.tar.gz -C ../Applications/
 cat >> ~/.bashrc << EOF
 export ONOS_ROOT=~/onos
 source ~/onos/tools/dev/bash_profile
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 export ONOS_CELL=pichuang # Change your cell name
 cell $ONOS_CELL
 EOF
@@ -92,9 +92,9 @@ cd ~/onos && git checkout onos-1.11
 source ~/.bashrc
 tools/build/onos-buck build onos --show-output
 ```
+- DO NOT install it when you are **root**
 - You will get the ONOS package in `buck-out/gen/tools/package/onos-package/onos.tar.gz`
-- Run the ONOS s
-ervice with debug mode. `tools/build/onos-buck run onos-local -- clean debug`
+- Run the ONOS service with debug mode. `tools/build/onos-buck run onos-local -- clean debug`
 - Attach to ONOS CLI `tools/test/bin/onos localhost`
 
 ### Create a cell definition
@@ -113,7 +113,7 @@ export OCI="192.168.100.45"
 
 # The ONOS apps to load at startup
 # For trellis
-export ONOS_APPS="drivers,openflow,segmentrouting,fpm,dhcprelay,netcfghostprovider"
+export ONOS_APPS="drivers,openflow,segmentrouting,fpm,dhcprelay,netcfghostprovider,routeradvertisement"
 
 # Pattern to specify which address to use for inter-ONOS node communication (not used with single-instance core)
 export ONOS_NIC="192.168.100.*"
@@ -129,14 +129,15 @@ EOF
 
 cell pichuang
 ```
-* 請依據自己的需求, 更改裡面的 value,
+* Change your configuraiton depend on the requirement by yourself
 * `ONOS_USER/ONOS_GROUP` 是指 ONOS-{1,2,3} 運行 ONOS 的 Linux User/Group, 並非是 Build Machine 內的
+* `ONOS_USER/ONOS_GROUP` is means user and group in Linux who will run ONOS applications, not for Build Machine.
 * `ONOS_WEB_USER/ONOS_WEB_PASS` 是指 ONOS-{1,2,3} 運行 ONOS 內於 `~/Applications/apache-karaf-3.0.5/etc/users.properties` 所設定好的帳號密碼, 只要有關 RESTful API 的存取, 皆是使用這組帳密
 * 每次要 Deploy 的時候, 建議都在跑一次 `cell $ONOS_CELL` 確定變數有載入到環境
 
 ### SSH Login Without Password
 ```bash
-# Generate SSH Key on Build-ONOS
+# Generate SSH Key on build machine
 ssh-keygen
 
 # Login via SSH from build machine to ONOS-1 machine
@@ -149,20 +150,29 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub sdn@192.168.100.46
 ssh-copy-id -i ~/.ssh/id_rsa.pub sdn@192.168.100.47
 ```
 
-### Deploy ONOS Package
+### Check package and set-up is ready on node
 ```bash
 stc prerequisites
+```
+
+### Deploy ONOS Package
+```bash
 stc setup
 ```
 * 如果對 `stc setup` 感到興趣的話, 可以參考 `$ONOS_ROOT/tools/test/scenarios/setup.xml` 的內容
   * 若對 setup.xml 運行的指令有興趣, 可以參考 `$ONOS_ROOT/tools/test/bin/` 的 Shell Script
 * `stc setup` `stc startup` `stc shutdown` 這三個指令建議可以都用看看
 
+### Uninstall ONOS Package
+```bash
+stc teardown
+```
+
 {% img https://lh3.googleusercontent.com/UwYDAR59NOASmqhGEEeAKzhlWpl8VkSIHie3WuqUTvNUzbU4EDt9M2bVYh5qePOZfZDxdmVFL9729mNuekyv1kKmFL1h9YESEOCzdn1B9EjnKOLRcgmH404Ce-9MKI3rJNowEmtji6v5dRdrbRVY9Kl5-rDWmuw8Fis6PFhyFwMcfkCjrK6sLWQX3FC2Hc1B1TstqVh2An411GrjmdbVY37YAv5wuAiOYlN5wSeSDPnrnehognv8ta-ohh5pTtVNS7ls5DLyfwo9i4RSMXY3ozFTMHVwEdf475RrAkWf4s0fAYXLfzbP6u1P7frzsToY6ngn8sowxfJdsh6OdXzREve2eDXaqfdetkPBTKZEmal60ADozGCozrSQNsPMXE6mM2Z7mvzPUGlKQGNkdX_53shFOdIKIf4U_5XLS4lnV7FCEQllFrZaShEVbQ9ie6VEk7QZIFi15HGsnArnJUhk-eUKGky_cxT8wtF78lUCUd49OizygRFg7xFHaYT_f7J4mRE02IqdS4ifTm_akf7rSChGDidIaKJtvu17VQp3CaKXlMeFL_CYXfyRNYIib8PjgIMqRzCk_pP8vz-p0JHzOxD1GOFCAsg=w1342-h1025-no %}
 
 ### Login ONOS Cluster CLI
 ```bash
-onos 192.168.100.45 # or use command `onos $OCI`
+onoss # or use command `onos $OCI`
 ```
 
 ### Open WEB GUI
