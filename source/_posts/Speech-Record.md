@@ -10,7 +10,12 @@ tags:
 ---
 
 
-## 2017 (Total: 24)
+## 2017 (Total: 29)
+- Up in the Air of SDN, Taipei, Taiwan, Dec. 24, 2017
+- The Mission of Open Networking Foundation, Taoyuan, Taiwan, Chung Yuan University, EE, Dec. 22, 2017
+- [R-CORD Overview][58], Beijing, China, [GNTC][55], Nov. 29, 2017
+- [CORD Overview][57], Beijing, China], [GNTC][55], Nov. 29, 2017
+- [ONOS Support for P4 Runtime][56], Beijing, China, [GNTC][55], Nov. 28, 2017
 - Introduction of Open Source Networking, Tainan, Taiwan, [通訊開源軟體產學技術研討會][51], National Cheng Kung University, Nov. 16, 2017
 - [Trellis Bare Metal Switches From Edgecore][54], San Jose, USA, [CORD Build 2017][50], Nov. 9, 2017
 - [北米ホワイトボックス活用事例最新動向][53], 東京, 日本, [ホワイトボックススイッチユーザ会 第四回勉強会][49], Oct. 26, 2017
@@ -112,3 +117,7 @@ tags:
 [52]: https://speakerdeck.com/pichuang/the-mission-of-open-networking
 [53]: https://speakerdeck.com/pichuang/bei-mi-howaitohotukusuhuo-yong-shi-li-zui-xin-dong-xiang
 [54]: https://speakerdeck.com/pichuang/trellis-bare-metal-switches-from-edgecore
+[55]: www.conference.cn/gntc/2017/
+[56]: https://speakerdeck.com/pichuang/onos-support-for-p4-runtime
+[57]: https://speakerdeck.com/pichuang/cord-overview-cord-workshop-gntc
+[58]: https://speakerdeck.com/pichuang/r-cord-overview-cord-workshop-gntc

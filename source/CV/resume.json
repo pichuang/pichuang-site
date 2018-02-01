@@ -1,186 +1,169 @@
 {
   "basics": {
-    "name": "Phil Huang",
-    "label": "SDN Active Contributor and Promoter",
+    "name": "Phil Huang 黃秉鈞",
+    "label": "Open Networking Solution Engineer at Edgecore Networks",
     "picture": "",
     "email": "inceptioninx@gmail.com",
-    "website": "http://blog.pichuang.com.tw",
-    "summary": "Phil comes from Taiwan. He currently works at Edgecore Networks as an SDN solution engineer. Before joining Edgecore Networks, he worked for Computer Center of CS department while pursuing M.S. degree. He also has been leading a community of SDN/NFV technology and communication in Taiwan. His work and interest focus on design and deployment SDN/NFV commercial/opensource solutions for customers. Moreover, he is an active engineer with strong NetDevOps & DevOps concept and experiences in Linux and SDN opensource projects. Phil earned his M.S. degree of CS from National Chiao Tung University and B.S. degree of CS from Tunhai University.",
+    "phone": "+886936969620",
+    "website": "blog.pichuang.com.tw",
+    "summary": "Phil Huang comes from Taiwan. He works for Edgecore Networks as a solution engineer and be in charge of open networking technicals PoC design, handling and representing it with the worldwide sales teams (including APAC/EMEA/UAE/Greater China team). He is an active engineer and has 7+ years experiences from B.S. on IaaS domain knowledge, and also contributes numbers of opensource projects on GitHub. The primary programming languages are Python and Ansible. He has lots of experiences in public community and business presentations, talking about the trend of SDN/NFV and technical details in Taiwan/US/Japan/China; until 2017, he had spoken in 29 presentations. So far, he is working on a project, based on OpenShift infrastructure which needs to integrate with Big Cloud Fabric product from BigSwitch Networks.",
     "location": {
       "address": "",
-      "postalCode": "600",
-      "city": "Chiayi City",
-      "countryCode": "TW",
-      "region": "Taiwan"
+      "postalCode": "",
+      "city": "HsinChu City",
+      "countryCode": "Taiwan",
+      "region": ""
     },
     "profiles": [
       {
-        "network": "Twitter",
-        "username": "pichuang_tw",
-        "url": "https://twitter.com/pichuang_tw"
-      },
-      {
-        "network": "Github",
+        "network": "GitHub",
         "username": "pichuang",
-        "url": "https://github.com/pichuang"
-      },
-      {
-        "network": "Speaker Deck",
-        "username": "pichuang",
-        "url": "https://speakerdeck.com/pichuang"
+        "url": "http://github.com/pichuang"
       },
       {
         "network": "Linkedin",
-        "username": "phil-huang",
-        "url": "https://www.linkedin.com/in/phil-huang-09b09895"
+        "username": "phil-huang-09b09895",
+        "url": "https://www.linkedin.com/in/phil-huang-09b09895/"
       }
     ]
   },
   "work": [
     {
       "company": "Edgecore Networks",
-      "position": "SDN Solution Engineer",
-      "website": "http://www.edge-core.com/",
-      "startDate": "2016-07-20",
-      "endDate": "Currently employed",
-      "summary": "Proactively scopes SDN technical solutions required to address customer requirements, assesses customers’ met and unmet needs, and recommends solutions that optimize value for both the client and the firm to make PoC successful.",
+      "position": "Open Networking Solution Engineer",
+      "website": "http://www.edge-core.com",
+      "startDate": "2016-07-12",
+      "endDate": "",
+      "summary": "Proactively scopes Open Networking technical solutions required to address customer requirements, assesses customers’ met and unmet needs, and recommends solutions that optimize value for both the client and the firm to make PoC successful",
       "highlights": [
-        "Technical support with CumulusLinux / Pica8 / BigSwitch / ONL solutions",
+        "Technical support and represent for CumulusLinux / Pica8 / BigSwitch / SONiC / CORD solutions ",
         "Secures from customer technical staff commitments needed to ensure a deal’s “technical close”",
         "Provides coaching and professional development to team member associates to enhance their product knowledge, technical acumen, and technical skills"
       ]
     },
     {
-      "company": "CS Computer Center, NCTU",
-      "position": "Graduate Teaching Assistant",
-      "website": "https://www.cs.nctu.edu.tw/cchonor/home",
-      "startDate": "2013-09-03",
-      "endDate": "2016-06-04",
-      "summary": "Responsible for overseeing the day-to-day operations of the team, distributing the workload evenly amongst TAs and making sure quality and performance levels are maintained.",
+      "company": "Computer Center, CS, National Chiao Tung University",
+      "position": "Technical Lead",
+      "website": "https://www.cs.nctu.edu.tw/cchonor/",
+      "startDate": "2013-09",
+      "endDate": "2016-04",
+      "summary": "",
       "highlights": [
-        "Headman with all of TAs / Linux / Windows team",
-        "Build DevOps culture and tools from scratch and push it into IT management",
-        "Provides team leadership and coaching to help team members"
+        "Plan technical roadmap for building new infrastructure ",
+        "Lead team member to improve services and develop the new one"
       ]
     }
   ],
   "volunteer": [
     {
-      "organization": "SDNDS TW",
-      "position": "Co-Founder",
-      "website": "http://sdnds.tw",
-      "startDate": "2014-08-23",
-      "endDate": "Currently employed",
-      "summary": "SDN Developer Society in Taiwan is a community-driven group which can connect with SDN / NFV industry, education.",
+      "organization": "Open Networking Foundation",
+      "position": "Ambassador Steering Team",
+      "website": "https://ambassadors.opennetworking.org/about/",
+      "startDate": "2017-09-01",
+      "endDate": "",
+      "summary": "The ONF Ambassadors Program is designed to empower anyone who is passionate and knowledgeable about ONF to promote the ONF’s projects like ONOS or CORD in their region and build a strong local community around it. The Ambassador Steering Team is tasked to ensure that the Ambassadors program runs smoothly and that Ambassadors are fully supported. ",
       "highlights": [
-        "Dissemination of SDN / NFV technology introduced locally",
-        "Provide technical presentations to the community and educational institutions"
+        "Oversee and support ONOS/CORD ambassador activities",
+        "Represent ONF's projects and teach",
+        "Serve as advisors in strategic decision-making at the organizational level"
       ]
     },
     {
-      "organization": "ONOS/CORD Ambassadors Program",
-      "position": "Ambassdor",
-      "website": "https://wiki.onosproject.org/display/AM/Phil+Huang",
-      "startDate": "2016",
-      "endDate": "Currently employed",
-      "summary": "Represent the ONOS/CORD community and promote ON.LAB project in Taiwan",
+      "organization": "SDNDS-TW",
+      "position": "Co-Founder",
+      "website": "https://www.facebook.com/groups/sdnds.tw/",
+      "startDate": "2014-08-23",
+      "endDate": "",
+      "summary": "SDN Developer Society (SDNDS-TW) is a local SDN developer community at Taiwan. The main purpose is to create an opportunity for SDN developers to communicate with each other. Everyone can share any information about SDN in the community.",
       "highlights": [
-        "Publish speech 5 times about ONOS/CORD topics locally in 2016",
-        "Bridge the community with education institution and company who interesting with ONOS/CORD"
+        "Promote Open Networking concept locally",
+        "Support and cooperate with others communities (e.g. CNCF, OpenStack, DevOps, Agile)",
+        "Organize SDN/NFV meetup at Taiwan"
       ]
     }
   ],
   "education": [
     {
-      "institution": "National Chiao Tung University, Taiwan",
+      "institution": "National Chiao Tung University",
       "area": "Computer Science",
-      "studyType": "Master",
-      "startDate": "2013-09-03",
-      "endDate": "2016-06-04",
+      "studyType": "Master of Science ",
+      "startDate": "2013",
+      "endDate": "2016",
       "gpa": "",
       "courses": [
-        "IOC5141 - Computer and Network System Administration Lab",
-        "IOE5033 - Wireless Internet"
+        "Software Defined Networking",
+        "System&Network Architecture"
       ]
     },
     {
-      "institution": "Tunghai University, Taiwan",
+      "institution": "Tunghai University",
       "area": "Computer Science",
-      "studyType": "Bachelor",
-      "startDate": "2009-06",
-      "endDate": "2012-06",
+      "studyType": "Bachelor of Science",
+      "startDate": "2008",
+      "endDate": "2012",
       "gpa": "",
       "courses": [
-        "4351 - Cluster Computation and Application",
-        "4556 - Parallel, Cluster and Grid Computing"
+        "Cyber Security",
+        "High Performance Computing",
+        "System Administrator"
       ]
     }
   ],
-  "awards": [
-    {
-      "title": "3rd Place, Taiwan Student Cluster Competition",
-      "date": "2012",
-      "awarder": "National Center for High-Performance Computing",
-      "summary": "Mainly aimed at system and network high-performance tuning and parallel-processing computing"
-    }
-  ],
+  "awards": [],
   "publications": [
     {
-      "name": "Global ONOS SDN-IP Deployment, NCTU, Taiwan",
-      "publisher": "SDN, ONOS, SDN-IP",
-      "releaseDate": "2016 Q1",
-      "website": "https://youtu.be/a8LR1DyzGY4",
-      "summary": "Lead technical team at Taiwan (Include NCTU, NCHC, Edgecore Networks) to join ON.LAB SDN-IP deployment plan within 3 weeks before ONS 2016"
+      "name": "Distributed OpenNet: A Distributed Software-Defined and Wireless LAN Network Emulator",
+      "publisher": "National Chiao Tung University",
+      "releaseDate": "2016-04",
+      "website": "https://github.com/dlinknctu/OpenNet",
+      "summary": "Publish and program an emulator for Software-Defined Wireless Local Area Network and Software-Defined LTE Backhaul Network. The technical knowledges are includes linux network namespace, Mininet framework from ONF and automation for multiple nodes deployment using Ansible"
     },
     {
-      "name": "Distributed OpenNet",
-      "publisher": "SDN, Emulator, Mininet, NS3",
-      "releaseDate": "2016",
-      "website": "https://github.com/dlinknctu/OpenNet",
-      "summary": "An emulator for Software-Defined Wireless Local Area Network and Software-Defined LTE Backhaul Netowrk. My focus on scale-out the environment for SDN emulation and build automation tool within install processes."
+      "name": "SDN-Based BGP Implementation",
+      "publisher": "Industrial Technology Research Institute",
+      "releaseDate": "2016-09-01",
+      "website": "http://www.airitilibrary.com/Publication/alDetailedMesh?DocID=1019391x-201609-201610120016-201610120016-46-53",
+      "summary": "Viewed a network controlled by an SDN controller (e.g. ONOS) or a cluster of SDN controller as an autonomous system, and use BGP to interact with the rest of the Internet, in order to achieve the effect of both the traditional network and SDN network can be connected. The PoC demonstration with ONF staffs is during Open Networking Summit 2016 event"
     }
   ],
   "skills": [
     {
-      "name": "Software-defined Networking",
-      "level": "Working knowledge",
+      "name": "Open Networking",
+      "level": "Master",
       "keywords": [
-        "Vertical hardware and software troubleshooting",
-        "Design PoC deployment plan and implement"
+        "SDN&NFV",
+        "NetDevOps",
+        "Solutions Integration"
       ]
     },
     {
-      "name": "Infrastructure as Code tools",
-      "level": "Working knowledge",
+      "name": "Linux",
+      "level": "Master",
       "keywords": [
-        "Ansible",
+        "Ubuntu",
+        "CentOS",
+        "ArchLinux"
+      ]
+    },
+    {
+      "name": "DevOps",
+      "level": "Advanced",
+      "keywords": [
         "Docker",
-        "Git"
-      ]
-    },
-    {
-      "name": "Language",
-      "level": "Working knowledge",
-      "keywords": [
+        "Ansible",
         "Python",
-        "Shell script",
-        "Java"
+        "CI/CD",
+        "Agile",
+        "IaC"
       ]
     },
     {
-      "name": "System",
-      "level": "Expert",
+      "name": "IaaS",
+      "level": "Advanced",
       "keywords": [
-        "Linux (ArchLinux, Ubuntu, CentOS)",
-        "FreeBSD",
-        "Windows"
-      ]
-    },
-    {
-      "name": "Hypervisor",
-      "level": "Working knowledge",
-      "keywords": [
-        "VMWare ESXi / vSphere",
+        "VMWare",
+        "Proxmox",
+        "OpenShift",
         "OpenStack"
       ]
     }
@@ -197,20 +180,19 @@
   ],
   "interests": [
     {
-      "name": "Travel",
+      "name": "Traveling",
       "keywords": [
-        "China / Singapore / Japan / US",
-        "In-depth travel for understanding other cultures"
+        "backpacking",
+        "openmind"
       ]
     },
     {
       "name": "Reading",
       "keywords": [
-        "Network and Linux",
+        "Computer Science",
         "Psychology"
       ]
     }
   ],
   "references": []
 }
-
