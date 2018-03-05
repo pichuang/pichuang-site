@@ -17,9 +17,9 @@ tags:
     - [Edgecore AS5712-54X](http://www.edge-core.com/productsInfo.php?cls=1&cls2=8&cls3=44&id=15)
 - Software
   - ONL version
-    - [ONL-2.0.0-ONL-OS-DEB8-2016-12-22.1828-604af0c-AMD64-INSTALLED-INSTALLER](http://opennetlinux.org/binaries/2016.12.22.18.28.604af0c9b3dc9504870c30273ab22f2fb62746c3/ONL-2.0.0-ONL-OS-DEB8-2016-12-22.1828-604af0c-AMD64-INSTALLED-INSTALLER)
+    - [ONL-2.0.0-ONL-OS-DEB8-2017-07-18.1642-40fc82b](https://opennetlinux.org/binaries/2017.07.18.1642.40fc82b48cabf8b14aa5d16d9dfa47c50a8c95a6)
   - OF-DPA version 
-    - [ofdpa_3.0 EA4](https://github.com/onfsdn/atrium-docs/raw/1f6cd3fe6d5f79fb2eab54ce6c916c22a3d6a551/16A/ONOS/builds/ofdpa_3.0.4.0%2Baccton1.0~1-1_amd64.deb)
+    - [ofdpa_3.0 EA5](https://github.com/onfsdn/atrium-docs/blob/master/16A/ONOS/builds/ofdpa_3.0.5.5+accton1.7-1_amd64.deb?raw=true)
 
 ### Set Base configuration
 1. vi /etc/network/interfaces
@@ -29,14 +29,8 @@ iface ma1 inet static
 address 192.168.11.2
 netmask 255.255.255.0
 gateway 192.168.11.254
+dns-nameservers 192.168.100.1
 ```
- 
-2. vi /etc/resolvconf/resolv.conf.d/base
-```
-nameserver 168.95.1.1
-```
-- `resolvconf -u`
-
 
 ### Rate Limit
 - Setting Rate Limit per queue 
