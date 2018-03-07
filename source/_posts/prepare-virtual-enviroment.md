@@ -7,7 +7,7 @@ updated: 2015-07-28 00:00:00 +0800
 category: Infra
 tags:
 - infra
-- VMWare
+- vmware
 ---
 
 ## Goal
