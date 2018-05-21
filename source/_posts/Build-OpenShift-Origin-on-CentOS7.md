@@ -19,6 +19,8 @@ tags:
 1. Please choose minimal installation
 2. `DO NOT disable` selinux feature after complete installation
 
+<!-- more -->
+
 ### Host Preparation include OpenShift master and nodes
 {% codeblock %}
 cat << EOF > /etc/hosts
