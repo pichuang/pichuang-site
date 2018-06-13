@@ -7,5 +7,5 @@ if [ -z "$1" ]; then
     echo "   ./write_new_post \"Phil Huang is a handsome man\" "
     echo 
 else
-  hexo new $1
+  echo "Please type \"hexo new <topic>"\""
 fi

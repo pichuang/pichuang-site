@@ -11,6 +11,8 @@ tags:
 
 Ansible 打從 2012 年於 GitHub 上誕生後，以短短三年的時間，力戰其他差不多概念的配置管理系統 (Configuration Management, CM)，整個專案被 Red Hat 併購走，開啟了對於企業資訊平台維運管理自動化的偉大航道。
 
+<!-- more -->
+
 ## 自動化是?
 自動化 (Automation) 本身是發展頗久的綜合性技術，需要結合多項具體實作和實作間的流程規劃 (Pipeline Design) 才能辦到。而基於此設計出的流程 (Pipeline) 進行一系列的不需人為介入連續性操作的方法 (Methodology)。
 
