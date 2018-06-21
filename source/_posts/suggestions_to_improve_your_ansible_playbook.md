@@ -25,7 +25,7 @@ tags:
 
 ### Suggestion 1: 建議遵從最佳實踐的 Ansible Direcory Layout 最佳建議
 
-若有常在撰寫 Anisble 的人都知道，若改一些 `ansible.cfg` 可以讓很多 playbook 呼叫變數及路徑變得非常的彈性。個人建議是可以改，但十分不建議。主因是你同事或交接的工程師不一定會知道你的個人習慣是什麼，建議走最佳實踐及建議之資料夾命名
+若有常在撰寫 Anisble 的人都知道，若改 `ansible.cfg` 可以讓很多 playbook 呼叫變數及路徑變得非常的彈性。可以改，但十分不建議這樣做。主要是你同事或跟你交接的工程師不一定會知道你的個人習慣是什麼，建議走最佳實踐及建議之資料夾命名
 
 ```bash
 production                # production servers 主機目錄
@@ -151,6 +151,19 @@ cat deploy_openshift_cluster.yml
 
 此外這功能主要是為了 Ansible Tower 設計的，除了具備可視化 Workflow 以外，還有多加錯誤處理，當 playbook 跑道有問題的時候，可以跳到錯誤處理進行應對，譬如發信通知等等。
 
+## Suggestion 5: 上版本控制系統 Version Control System
+
+這邊的版控可以是任何一家的方案 git, svn, mercurial ...etc，沒有最佳只有最適合自己的方案，我自己是一律推崇使用 `git`，無論你是用中央式或分散式的管理方式，都可以用 git 辦到，極度好用
+
+遵照 Infrastrcture as Code 的思想，盡量對所有 source code 的變動都要有所記錄。上版控有幾個好處，可以...
+- 允許使用者將檔案恢復到某個時間的狀態
+- 進行不同時間點的修改
+- 確認該時間點誰進行了變更導致問題產生
+- 容易進行備份管理
+
+Ansible Tower 的專案內容更新也是需要`基於版本控制`進行設定檔的變動，方便進行 playbook 的內容管理
+
+### Suggestion 6: TBC...
 
 ## References
 - [Ansible - Best Practies](https://docs.ansible.com/ansible/latest/user_guide/playbooks_best_practices.html#best-practices)
