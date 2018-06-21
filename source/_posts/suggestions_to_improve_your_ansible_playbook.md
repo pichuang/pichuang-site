@@ -11,7 +11,7 @@ tags:
 - iac
 ---
 
-# 改善 Ansible Playbook 的建議
+# 改善 Ansible Playbook 的幾個小建議
 ## 前言
 
 先說本文謹代表個人撰寫 Ansible Playbook 及 Ansible Tower 之經驗累積，不定期會更新內容，僅供參考 XD
@@ -133,6 +133,24 @@ ansible-playbook -i inventory deploy_new_vm_env --extra-vars='variable_host=192
 針對 192.168.100.1 這台機器作部署或上 patch，倘若我都沒有下任何 extra-vars 的話就會直接針對 inventory 內所有機器 all 做處理。
 
 這個寫法也可以結合 Ansible Tower 裡 Survey 功能進行 Self-service 應用。
+
+## Suggestion 4: Ansible Workflow 實作提示
+
+其實這概念是從 Ansible Tower 延伸出來的，將 `將多個 Playbook 序列化執行`，這個是在你的業務目標是由多個業務目標所建立起來才會需要的一個作法，你可以把它想成 Agile 專案術語 Epic / Story / Task 對應到 Ansible Workflow / Playbook / Roles。
+
+Workflow 具體寫法是...
+```bash
+cat deploy_openshift_cluster.yml
+---
+- import_playbook: prerequisite_env.yml
+- import_playbook: deploy_core_componets.yml
+- import_playbook: check_componets.yml
+```
+
+倘若你想要的話，也可以 workflow in workflow 持續疊下去，除非你對抽象化程度非常有把握，不然頂多做一層 workflow 應可應付多數需求。
+
+此外這功能主要是為了 Ansible Tower 設計的，除了具備可視化 Workflow 以外，還有多加錯誤處理，當 playbook 跑道有問題的時候，可以跳到錯誤處理進行應對，譬如發信通知等等。
+
 
 ## References
 - [Ansible - Best Practies](https://docs.ansible.com/ansible/latest/user_guide/playbooks_best_practices.html#best-practices)
